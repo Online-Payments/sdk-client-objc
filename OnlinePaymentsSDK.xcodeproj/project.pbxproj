@@ -1,0 +1,1482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F739BB4A24C57C6000FFE16B /* OPBase64TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB4924C57C6000FFE16B /* OPBase64TestCase.m */; };
+		F739BB4E24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB4D24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m */; };
+		F739BB5424C5827500FFE16B /* OPPaymentProductConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5324C5827500FFE16B /* OPPaymentProductConverterTestCase.m */; };
+		F739BB5624C582AA00FFE16B /* OPPaymentProductsConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5524C582AA00FFE16B /* OPPaymentProductsConverterTestCase.m */; };
+		F739BB5824C582F100FFE16B /* OPJOSEEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5724C582F100FFE16B /* OPJOSEEncryptorTestCase.m */; };
+		F739BB5A24C5834500FFE16B /* OPEncryptorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5924C5834500FFE16B /* OPEncryptorTestCase.m */; };
+		F739BB5C24C58D4E00FFE16B /* OPStringFormatterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5B24C58D4E00FFE16B /* OPStringFormatterTestCase.m */; };
+		F739BB5E24C58D8100FFE16B /* OPJSONTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5D24C58D8100FFE16B /* OPJSONTestCase.m */; };
+		F739BB6524C58DDE00FFE16B /* certificate.pfx in Resources */ = {isa = PBXBuildFile; fileRef = F739BB5F24C58DDE00FFE16B /* certificate.pfx */; };
+		F739BB6624C58DDE00FFE16B /* paymentProductGroups.json in Resources */ = {isa = PBXBuildFile; fileRef = F739BB6024C58DDE00FFE16B /* paymentProductGroups.json */; };
+		F739BB6724C58DDE00FFE16B /* paymentProductMissingFields.json in Resources */ = {isa = PBXBuildFile; fileRef = F739BB6124C58DDE00FFE16B /* paymentProductMissingFields.json */; };
+		F739BB6824C58DDE00FFE16B /* paymentProducts.json in Resources */ = {isa = PBXBuildFile; fileRef = F739BB6224C58DDE00FFE16B /* paymentProducts.json */; };
+		F739BB6924C58DDE00FFE16B /* paymentProductGroup.json in Resources */ = {isa = PBXBuildFile; fileRef = F739BB6324C58DDE00FFE16B /* paymentProductGroup.json */; };
+		F739BB6A24C58DDE00FFE16B /* paymentProduct.json in Resources */ = {isa = PBXBuildFile; fileRef = F739BB6424C58DDE00FFE16B /* paymentProduct.json */; };
+		F739BB6C24C58DF900FFE16B /* OPNetworkingWrapperTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB6B24C58DF900FFE16B /* OPNetworkingWrapperTestCase.m */; };
+		F739BB8024C58E6600FFE16B /* OPAccountOnFileTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB6D24C58E6500FFE16B /* OPAccountOnFileTestCase.m */; };
+		F739BB8124C58E6600FFE16B /* OPValidatorRegularExpressionTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB6E24C58E6500FFE16B /* OPValidatorRegularExpressionTestCase.m */; };
+		F739BB8224C58E6600FFE16B /* OPPaymentProductsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB6F24C58E6500FFE16B /* OPPaymentProductsTestCase.m */; };
+		F739BB8324C58E6600FFE16B /* OPValidatorRangeTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7024C58E6500FFE16B /* OPValidatorRangeTestCase.m */; };
+		F739BB8424C58E6600FFE16B /* OPValidatorEmailAddressTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7124C58E6500FFE16B /* OPValidatorEmailAddressTestCase.m */; };
+		F739BB8524C58E6600FFE16B /* OPPaymentProductFieldTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7224C58E6500FFE16B /* OPPaymentProductFieldTestCase.m */; };
+		F739BB8624C58E6600FFE16B /* OPValidatorExpirationDateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7324C58E6500FFE16B /* OPValidatorExpirationDateTestCase.m */; };
+		F739BB8724C58E6600FFE16B /* OPPaymentProductFieldsTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7424C58E6500FFE16B /* OPPaymentProductFieldsTestCase.m */; };
+		F739BB8824C58E6600FFE16B /* OPAccountOnFileAttributesTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7524C58E6500FFE16B /* OPAccountOnFileAttributesTestCase.m */; };
+		F739BB8924C58E6600FFE16B /* OPPaymentRequestTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7624C58E6500FFE16B /* OPPaymentRequestTestCase.m */; };
+		F739BB8A24C58E6600FFE16B /* OPValidatorFixedListTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7824C58E6500FFE16B /* OPValidatorFixedListTestCase.m */; };
+		F739BB8B24C58E6600FFE16B /* OPBasicPaymentProductTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7924C58E6500FFE16B /* OPBasicPaymentProductTestCase.m */; };
+		F739BB8C24C58E6600FFE16B /* OPAccountsOnFileTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7A24C58E6500FFE16B /* OPAccountsOnFileTestCase.m */; };
+		F739BB8E24C58E6600FFE16B /* OPLabelTemplateTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7C24C58E6500FFE16B /* OPLabelTemplateTestCase.m */; };
+		F739BB8F24C58E6600FFE16B /* OPValidatorLengthTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7D24C58E6600FFE16B /* OPValidatorLengthTestCase.m */; };
+		F739BB9024C58E6600FFE16B /* OPValidatorLuhnTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7E24C58E6600FFE16B /* OPValidatorLuhnTestCase.m */; };
+		F739BB9124C58E6600FFE16B /* OPPaymentProductTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB7F24C58E6600FFE16B /* OPPaymentProductTestCase.m */; };
+		F74A8CC024C19D7400FEE8F1 /* OnlinePaymentsSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74A8CB624C19D7400FEE8F1 /* OnlinePaymentsSDK.framework */; };
+		F74A8CC724C19D7400FEE8F1 /* OnlinePaymentsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CB924C19D7400FEE8F1 /* OnlinePaymentsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CDD24C1A30900FEE8F1 /* OPUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CDB24C1A30900FEE8F1 /* OPUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CDE24C1A30900FEE8F1 /* OPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CDC24C1A30900FEE8F1 /* OPUtil.m */; };
+		F74A8CE124C1A3C700FEE8F1 /* OPAssetManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CDF24C1A3C700FEE8F1 /* OPAssetManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CE224C1A3C700FEE8F1 /* OPAssetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CE024C1A3C700FEE8F1 /* OPAssetManager.m */; };
+		F74A8CE524C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CE324C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CE624C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CE424C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.m */; };
+		F74A8CE924C1A51C00FEE8F1 /* OPC2SCommunicator.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CE724C1A51C00FEE8F1 /* OPC2SCommunicator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CEA24C1A51C00FEE8F1 /* OPC2SCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CE824C1A51C00FEE8F1 /* OPC2SCommunicator.m */; };
+		F74A8CED24C1A89B00FEE8F1 /* OPSession.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CEB24C1A89B00FEE8F1 /* OPSession.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CEE24C1A89B00FEE8F1 /* OPSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CEC24C1A89B00FEE8F1 /* OPSession.m */; };
+		F74A8CF124C1B6F100FEE8F1 /* OPBase64.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CEF24C1B6F100FEE8F1 /* OPBase64.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8CF224C1B6F100FEE8F1 /* OPBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CF024C1B6F100FEE8F1 /* OPBase64.m */; };
+		F74A8CF524C1B77800FEE8F1 /* OPSDKConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CF324C1B77800FEE8F1 /* OPSDKConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D0F24C1B7CA00FEE8F1 /* OPPaymentContextConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CF724C1B7C900FEE8F1 /* OPPaymentContextConverter.m */; };
+		F74A8D1224C1B7CA00FEE8F1 /* OPBasicPaymentItemConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CFA24C1B7C900FEE8F1 /* OPBasicPaymentItemConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D1324C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CFB24C1B7C900FEE8F1 /* OPIINDetailsResponseConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D1424C1B7CA00FEE8F1 /* OPPaymentProductConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CFC24C1B7C900FEE8F1 /* OPPaymentProductConverter.m */; };
+		F74A8D1524C1B7CA00FEE8F1 /* OPBasicPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8CFD24C1B7C900FEE8F1 /* OPBasicPaymentItemConverter.m */; };
+		F74A8D1724C1B7CA00FEE8F1 /* OPPaymentProductConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8CFF24C1B7CA00FEE8F1 /* OPPaymentProductConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D1924C1B7CA00FEE8F1 /* OPPaymentItemConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D0124C1B7CA00FEE8F1 /* OPPaymentItemConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D1A24C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D0224C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D1B24C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D0324C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.m */; };
+		F74A8D1D24C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D0524C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.m */; };
+		F74A8D1F24C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D0724C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.m */; };
+		F74A8D2224C1B7CA00FEE8F1 /* OPPaymentItemConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D0A24C1B7CA00FEE8F1 /* OPPaymentItemConverter.m */; };
+		F74A8D2424C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D0C24C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D2624C1B7CA00FEE8F1 /* OPPaymentContextConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D0E24C1B7CA00FEE8F1 /* OPPaymentContextConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D2924C1BB1300FEE8F1 /* OPEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D2724C1BB1300FEE8F1 /* OPEncryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D2A24C1BB1300FEE8F1 /* OPEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D2824C1BB1300FEE8F1 /* OPEncryptor.m */; };
+		F74A8D2D24C1BB7F00FEE8F1 /* OPJOSEEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D2B24C1BB7F00FEE8F1 /* OPJOSEEncryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D2E24C1BB7F00FEE8F1 /* OPJOSEEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D2C24C1BB7F00FEE8F1 /* OPJOSEEncryptor.m */; };
+		F74A8D3624C1BBDE00FEE8F1 /* OPPreferredInputType.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D2F24C1BBDD00FEE8F1 /* OPPreferredInputType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D3724C1BBDE00FEE8F1 /* OPAccountOnFileAttributeStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D3024C1BBDD00FEE8F1 /* OPAccountOnFileAttributeStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D3824C1BBDE00FEE8F1 /* OPFormElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D3124C1BBDD00FEE8F1 /* OPFormElementType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D3B24C1BBDE00FEE8F1 /* OPIINStatus.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D3424C1BBDD00FEE8F1 /* OPIINStatus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D3C24C1BBDE00FEE8F1 /* OPType.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D3524C1BBDE00FEE8F1 /* OPType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D3F24C1BCF100FEE8F1 /* OPStringFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D3D24C1BCF100FEE8F1 /* OPStringFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D4024C1BCF100FEE8F1 /* OPStringFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D3E24C1BCF100FEE8F1 /* OPStringFormatter.m */; };
+		F74A8D4324C1BD4900FEE8F1 /* OPJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D4124C1BD4900FEE8F1 /* OPJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8D4424C1BD4900FEE8F1 /* OPJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8D4224C1BD4900FEE8F1 /* OPJSON.m */; };
+		F74A8D4624C1BDBB00FEE8F1 /* OPMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8D4524C1BDBB00FEE8F1 /* OPMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8EE324C1BEF400FEE8F1 /* OPNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EE124C1BEF400FEE8F1 /* OPNetworkingWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8EE424C1BEF400FEE8F1 /* OPNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8EE224C1BEF400FEE8F1 /* OPNetworkingWrapper.m */; };
+		F74A8EE724C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EE524C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8EE824C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8EE624C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.m */; };
+		F74A8EEB24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EE924C1BF2700FEE8F1 /* OPNetworkingActivityLogger.h */; };
+		F74A8EEC24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8EEA24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.m */; };
+		F74A8EEF24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EED24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.h */; };
+		F74A8EF024C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8EEE24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.m */; };
+		F74A8EFC24C1C75C00FEE8F1 /* OPPaymentContext.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EFA24C1C75C00FEE8F1 /* OPPaymentContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8EFD24C1C75C00FEE8F1 /* OPPaymentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8EFB24C1C75C00FEE8F1 /* OPPaymentContext.m */; };
+		F74A8F0024C1C77200FEE8F1 /* OPPaymentAmountOfMoney.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EFE24C1C77100FEE8F1 /* OPPaymentAmountOfMoney.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F0124C1C77200FEE8F1 /* OPPaymentAmountOfMoney.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8EFF24C1C77200FEE8F1 /* OPPaymentAmountOfMoney.m */; };
+		F74A8F1424C1D79400FEE8F1 /* OPIINDetailsResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F1224C1D79400FEE8F1 /* OPIINDetailsResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F1524C1D79400FEE8F1 /* OPIINDetailsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F1324C1D79400FEE8F1 /* OPIINDetailsResponse.m */; };
+		F74A8F1824C1D7F600FEE8F1 /* OPIINDetail.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F1624C1D7F600FEE8F1 /* OPIINDetail.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F1924C1D7F600FEE8F1 /* OPIINDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F1724C1D7F600FEE8F1 /* OPIINDetail.m */; };
+		F74A8F1D24C1D88500FEE8F1 /* OPPaymentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F1B24C1D88500FEE8F1 /* OPPaymentRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F1E24C1D88500FEE8F1 /* OPPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F1C24C1D88500FEE8F1 /* OPPaymentRequest.m */; };
+		F74A8F2124C1D90D00FEE8F1 /* OPPreparedPaymentRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F1F24C1D90D00FEE8F1 /* OPPreparedPaymentRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F2224C1D90D00FEE8F1 /* OPPreparedPaymentRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2024C1D90D00FEE8F1 /* OPPreparedPaymentRequest.m */; };
+		F74A8F2524C1D94400FEE8F1 /* OPPublicKeyResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F2324C1D94400FEE8F1 /* OPPublicKeyResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F2624C1D94400FEE8F1 /* OPPublicKeyResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2424C1D94400FEE8F1 /* OPPublicKeyResponse.m */; };
+		F74A8F4324C1D99200FEE8F1 /* OPValidationErrorRegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F2724C1D98F00FEE8F1 /* OPValidationErrorRegularExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F4424C1D99200FEE8F1 /* OPValidationErrorEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2824C1D98F00FEE8F1 /* OPValidationErrorEmailAddress.m */; };
+		F74A8F4524C1D99200FEE8F1 /* OPValidationErrorExpirationDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2924C1D98F00FEE8F1 /* OPValidationErrorExpirationDate.m */; };
+		F74A8F4624C1D99200FEE8F1 /* OPValidationErrorLuhn.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2A24C1D99000FEE8F1 /* OPValidationErrorLuhn.m */; };
+		F74A8F4724C1D99200FEE8F1 /* OPValidationErrorLength.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2B24C1D99000FEE8F1 /* OPValidationErrorLength.m */; };
+		F74A8F4824C1D99200FEE8F1 /* OPValidationErrorAllowed.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F2C24C1D99000FEE8F1 /* OPValidationErrorAllowed.m */; };
+		F74A8F4924C1D99200FEE8F1 /* OPValidationErrorAllowed.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F2D24C1D99000FEE8F1 /* OPValidationErrorAllowed.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F4A24C1D99200FEE8F1 /* OPValidationErrorExpirationDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F2E24C1D99000FEE8F1 /* OPValidationErrorExpirationDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F4B24C1D99200FEE8F1 /* OPValidationErrorIsRequired.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F2F24C1D99000FEE8F1 /* OPValidationErrorIsRequired.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F4C24C1D99200FEE8F1 /* OPValidationError.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3024C1D99000FEE8F1 /* OPValidationError.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F4D24C1D99200FEE8F1 /* OPValidationErrorInteger.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3124C1D99000FEE8F1 /* OPValidationErrorInteger.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F4E24C1D99200FEE8F1 /* OPValidationError.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3224C1D99000FEE8F1 /* OPValidationError.m */; };
+		F74A8F4F24C1D99200FEE8F1 /* OPValidationErrorNumericString.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3324C1D99000FEE8F1 /* OPValidationErrorNumericString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5024C1D99200FEE8F1 /* OPValidationErrorRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3424C1D99000FEE8F1 /* OPValidationErrorRegularExpression.m */; };
+		F74A8F5124C1D99200FEE8F1 /* OPValidationErrorFixedList.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3524C1D99000FEE8F1 /* OPValidationErrorFixedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5224C1D99200FEE8F1 /* OPValidationErrorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3624C1D99000FEE8F1 /* OPValidationErrorIBAN.m */; };
+		F74A8F5324C1D99200FEE8F1 /* OPValidationErrorNumericString.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3724C1D99100FEE8F1 /* OPValidationErrorNumericString.m */; };
+		F74A8F5424C1D99200FEE8F1 /* OPValidationErrorIsRequired.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3824C1D99100FEE8F1 /* OPValidationErrorIsRequired.m */; };
+		F74A8F5524C1D99200FEE8F1 /* OPValidationErrorRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3924C1D99100FEE8F1 /* OPValidationErrorRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5624C1D99200FEE8F1 /* OPValidationErrorEmailAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3A24C1D99100FEE8F1 /* OPValidationErrorEmailAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5724C1D99200FEE8F1 /* OPValidationErrorFixedList.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3B24C1D99100FEE8F1 /* OPValidationErrorFixedList.m */; };
+		F74A8F5824C1D99200FEE8F1 /* OPValidationErrorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3C24C1D99100FEE8F1 /* OPValidationErrorRange.m */; };
+		F74A8F5924C1D99200FEE8F1 /* OPValidationErrorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3D24C1D99100FEE8F1 /* OPValidationErrorTermsAndConditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5A24C1D99200FEE8F1 /* OPValidationErrorLuhn.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F3E24C1D99100FEE8F1 /* OPValidationErrorLuhn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5B24C1D99200FEE8F1 /* OPValidationErrorInteger.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F3F24C1D99100FEE8F1 /* OPValidationErrorInteger.m */; };
+		F74A8F5C24C1D99200FEE8F1 /* OPValidationErrorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F4024C1D99100FEE8F1 /* OPValidationErrorIBAN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F5D24C1D99200FEE8F1 /* OPValidationErrorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F4124C1D99100FEE8F1 /* OPValidationErrorTermsAndConditions.m */; };
+		F74A8F5E24C1D99200FEE8F1 /* OPValidationErrorLength.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F4224C1D99100FEE8F1 /* OPValidationErrorLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F7724C1DC8B00FEE8F1 /* OPValidatorFixedList.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F5F24C1DC8900FEE8F1 /* OPValidatorFixedList.m */; };
+		F74A8F7824C1DC8B00FEE8F1 /* OPValidatorLuhn.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6024C1DC8900FEE8F1 /* OPValidatorLuhn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F7924C1DC8B00FEE8F1 /* OPValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6124C1DC8900FEE8F1 /* OPValidator.m */; };
+		F74A8F7A24C1DC8B00FEE8F1 /* OPValidatorEmailAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6224C1DC8900FEE8F1 /* OPValidatorEmailAddress.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F7B24C1DC8B00FEE8F1 /* OPValidatorRange.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6324C1DC8900FEE8F1 /* OPValidatorRange.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F7C24C1DC8B00FEE8F1 /* OPValidatorRegularExpression.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6424C1DC8A00FEE8F1 /* OPValidatorRegularExpression.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F7D24C1DC8B00FEE8F1 /* OPValidatorRegularExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6524C1DC8A00FEE8F1 /* OPValidatorRegularExpression.m */; };
+		F74A8F7E24C1DC8B00FEE8F1 /* OPValidators.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6624C1DC8A00FEE8F1 /* OPValidators.m */; };
+		F74A8F7F24C1DC8B00FEE8F1 /* OPValidatorTermsAndConditions.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6724C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8024C1DC8B00FEE8F1 /* OPValidatorLuhn.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6824C1DC8A00FEE8F1 /* OPValidatorLuhn.m */; };
+		F74A8F8124C1DC8B00FEE8F1 /* OPValueMappingItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6924C1DC8A00FEE8F1 /* OPValueMappingItem.m */; };
+		F74A8F8224C1DC8B00FEE8F1 /* OPValidators.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6A24C1DC8A00FEE8F1 /* OPValidators.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8324C1DC8B00FEE8F1 /* OPValueMappingItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6B24C1DC8A00FEE8F1 /* OPValueMappingItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8424C1DC8B00FEE8F1 /* OPValidatorRange.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6C24C1DC8A00FEE8F1 /* OPValidatorRange.m */; };
+		F74A8F8524C1DC8B00FEE8F1 /* OPValidatorTermsAndConditions.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F6D24C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.m */; };
+		F74A8F8624C1DC8B00FEE8F1 /* OPValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F6E24C1DC8A00FEE8F1 /* OPValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8924C1DC8B00FEE8F1 /* OPValidatorExpirationDate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F7124C1DC8B00FEE8F1 /* OPValidatorExpirationDate.m */; };
+		F74A8F8A24C1DC8B00FEE8F1 /* OPValidatorLength.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F7224C1DC8B00FEE8F1 /* OPValidatorLength.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8B24C1DC8B00FEE8F1 /* OPValidatorExpirationDate.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F7324C1DC8B00FEE8F1 /* OPValidatorExpirationDate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8C24C1DC8B00FEE8F1 /* OPValidatorLength.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F7424C1DC8B00FEE8F1 /* OPValidatorLength.m */; };
+		F74A8F8D24C1DC8B00FEE8F1 /* OPValidatorFixedList.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F7524C1DC8B00FEE8F1 /* OPValidatorFixedList.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8F8E24C1DC8B00FEE8F1 /* OPValidatorEmailAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F7624C1DC8B00FEE8F1 /* OPValidatorEmailAddress.m */; };
+		F74A8F9F24C1E15A00FEE8F1 /* OPPaymentProduct302SpecificData.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F8F24C1E15800FEE8F1 /* OPPaymentProduct302SpecificData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8FA124C1E15A00FEE8F1 /* OPPaymentProduct302SpecificData.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F9124C1E15800FEE8F1 /* OPPaymentProduct302SpecificData.m */; };
+		F74A8FA424C1E15A00FEE8F1 /* OPDisplayElementType.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F9424C1E15900FEE8F1 /* OPDisplayElementType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8FA724C1E15A00FEE8F1 /* OPDisplayElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F9724C1E15900FEE8F1 /* OPDisplayElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8FA924C1E15A00FEE8F1 /* OPDisplayElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F9924C1E15900FEE8F1 /* OPDisplayElement.m */; };
+		F74A8FAC24C1E15A00FEE8F1 /* OPDisplayElementsConverter.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8F9C24C1E15900FEE8F1 /* OPDisplayElementsConverter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A8FAD24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A8F9D24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m */; };
+		F74A916E24C1E19800FEE8F1 /* OPBasicPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914224C1E19300FEE8F1 /* OPBasicPaymentProductGroup.m */; };
+		F74A916F24C1E19800FEE8F1 /* OPLabelTemplate.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914324C1E19300FEE8F1 /* OPLabelTemplate.m */; };
+		F74A917024C1E19800FEE8F1 /* OPBasicPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914424C1E19300FEE8F1 /* OPBasicPaymentProduct.m */; };
+		F74A917124C1E19800FEE8F1 /* OPBasicPaymentProducts.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914524C1E19300FEE8F1 /* OPBasicPaymentProducts.m */; };
+		F74A917224C1E19800FEE8F1 /* OPPaymentProductField.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A914624C1E19300FEE8F1 /* OPPaymentProductField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917324C1E19800FEE8F1 /* OPPaymentProductField.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914724C1E19400FEE8F1 /* OPPaymentProductField.m */; };
+		F74A917424C1E19800FEE8F1 /* OPAccountOnFileAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A914824C1E19400FEE8F1 /* OPAccountOnFileAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917524C1E19800FEE8F1 /* OPAccountOnFileAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914924C1E19400FEE8F1 /* OPAccountOnFileAttribute.m */; };
+		F74A917624C1E19800FEE8F1 /* OPPaymentProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A914A24C1E19400FEE8F1 /* OPPaymentProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917724C1E19800FEE8F1 /* OPToolTip.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A914B24C1E19400FEE8F1 /* OPToolTip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917824C1E19800FEE8F1 /* OPPaymentItemDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914C24C1E19400FEE8F1 /* OPPaymentItemDisplayHints.m */; };
+		F74A917924C1E19800FEE8F1 /* OPToolTip.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914D24C1E19400FEE8F1 /* OPToolTip.m */; };
+		F74A917A24C1E19800FEE8F1 /* OPBasicPaymentProductGroups.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A914E24C1E19400FEE8F1 /* OPBasicPaymentProductGroups.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917B24C1E19800FEE8F1 /* OPAccountOnFileAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A914F24C1E19400FEE8F1 /* OPAccountOnFileAttributes.m */; };
+		F74A917C24C1E19800FEE8F1 /* OPFormElement.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915024C1E19500FEE8F1 /* OPFormElement.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917D24C1E19800FEE8F1 /* OPAccountOnFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915124C1E19500FEE8F1 /* OPAccountOnFile.m */; };
+		F74A917E24C1E19800FEE8F1 /* OPBasicPaymentProduct.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915224C1E19500FEE8F1 /* OPBasicPaymentProduct.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A917F24C1E19800FEE8F1 /* OPDataRestrictions.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915324C1E19500FEE8F1 /* OPDataRestrictions.m */; };
+		F74A918024C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915424C1E19500FEE8F1 /* OPPaymentProductFieldDisplayHints.m */; };
+		F74A918124C1E19800FEE8F1 /* OPDataRestrictions.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915524C1E19500FEE8F1 /* OPDataRestrictions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918224C1E19800FEE8F1 /* OPAccountOnFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915624C1E19500FEE8F1 /* OPAccountOnFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918324C1E19800FEE8F1 /* OPPaymentProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915724C1E19500FEE8F1 /* OPPaymentProduct.m */; };
+		F74A918424C1E19800FEE8F1 /* OPPaymentProductNetworks.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915824C1E19500FEE8F1 /* OPPaymentProductNetworks.m */; };
+		F74A918524C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915924C1E19500FEE8F1 /* OPAccountOnFileDisplayHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918624C1E19800FEE8F1 /* OPPaymentProductFields.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915A24C1E19600FEE8F1 /* OPPaymentProductFields.m */; };
+		F74A918724C1E19800FEE8F1 /* OPAccountOnFileAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915B24C1E19600FEE8F1 /* OPAccountOnFileAttribute.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918824C1E19800FEE8F1 /* OPPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915C24C1E19600FEE8F1 /* OPPaymentProductGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918924C1E19800FEE8F1 /* OPBasicPaymentProductGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915D24C1E19600FEE8F1 /* OPBasicPaymentProductGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918A24C1E19800FEE8F1 /* OPBasicPaymentProductGroups.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A915E24C1E19600FEE8F1 /* OPBasicPaymentProductGroups.m */; };
+		F74A918B24C1E19800FEE8F1 /* OPPaymentProductNetworks.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A915F24C1E19600FEE8F1 /* OPPaymentProductNetworks.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918C24C1E19800FEE8F1 /* OPPaymentItems.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A916024C1E19600FEE8F1 /* OPPaymentItems.m */; };
+		F74A918D24C1E19800FEE8F1 /* OPLabelTemplateItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916124C1E19600FEE8F1 /* OPLabelTemplateItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918E24C1E19800FEE8F1 /* OPPaymentItems.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916224C1E19700FEE8F1 /* OPPaymentItems.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A918F24C1E19800FEE8F1 /* OPFormElement.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A916324C1E19700FEE8F1 /* OPFormElement.m */; };
+		F74A919024C1E19800FEE8F1 /* OPPaymentProductFields.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916424C1E19700FEE8F1 /* OPPaymentProductFields.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919124C1E19800FEE8F1 /* OPPaymentProductGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A916524C1E19700FEE8F1 /* OPPaymentProductGroup.m */; };
+		F74A919224C1E19800FEE8F1 /* OPPaymentItemDisplayHints.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916624C1E19700FEE8F1 /* OPPaymentItemDisplayHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919324C1E19800FEE8F1 /* OPAccountsOnFile.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A916724C1E19700FEE8F1 /* OPAccountsOnFile.m */; };
+		F74A919424C1E19800FEE8F1 /* OPLabelTemplateItem.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A916824C1E19700FEE8F1 /* OPLabelTemplateItem.m */; };
+		F74A919524C1E19800FEE8F1 /* OPLabelTemplate.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916924C1E19700FEE8F1 /* OPLabelTemplate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919624C1E19800FEE8F1 /* OPAccountsOnFile.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916A24C1E19700FEE8F1 /* OPAccountsOnFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919724C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A916B24C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.m */; };
+		F74A919824C1E19800FEE8F1 /* OPBasicPaymentProducts.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916C24C1E19800FEE8F1 /* OPBasicPaymentProducts.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919924C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A916D24C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919D24C1EF5900FEE8F1 /* OPValidatorIBAN.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A919B24C1EF5900FEE8F1 /* OPValidatorIBAN.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A919E24C1EF5900FEE8F1 /* OPValidatorIBAN.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A919C24C1EF5900FEE8F1 /* OPValidatorIBAN.m */; };
+		F74A91A924C2F54F00FEE8F1 /* OPUtilTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A91A824C2F54F00FEE8F1 /* OPUtilTestCase.m */; };
+		F74A91AD24C2F5E700FEE8F1 /* OPC2SCommunicatorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F74A91AC24C2F5E700FEE8F1 /* OPC2SCommunicatorTestCase.m */; };
+		F74A91AF24C2FFCD00FEE8F1 /* OPBasicPaymentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EDA24C1BE0800FEE8F1 /* OPBasicPaymentItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74A91B024C2FFEA00FEE8F1 /* OPPaymentItem.h in Headers */ = {isa = PBXBuildFile; fileRef = F74A8EDB24C1BE2F00FEE8F1 /* OPPaymentItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F74DA18124CF05B8002B6DE6 /* OnlinePaymentsSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F74DA18024CF05B8002B6DE6 /* OnlinePaymentsSDK.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F74A8CC124C19D7400FEE8F1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F74A8CAD24C19D7400FEE8F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F74A8CB524C19D7400FEE8F1;
+			remoteInfo = IngenicoDirectSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F739BB4924C57C6000FFE16B /* OPBase64TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPBase64TestCase.m; sourceTree = "<group>"; };
+		F739BB4D24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductConverterTestCase.m; sourceTree = "<group>"; };
+		F739BB5324C5827500FFE16B /* OPPaymentProductConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductConverterTestCase.m; sourceTree = "<group>"; };
+		F739BB5524C582AA00FFE16B /* OPPaymentProductsConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsConverterTestCase.m; sourceTree = "<group>"; };
+		F739BB5724C582F100FFE16B /* OPJOSEEncryptorTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPJOSEEncryptorTestCase.m; sourceTree = "<group>"; };
+		F739BB5924C5834500FFE16B /* OPEncryptorTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPEncryptorTestCase.m; sourceTree = "<group>"; };
+		F739BB5B24C58D4E00FFE16B /* OPStringFormatterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPStringFormatterTestCase.m; sourceTree = "<group>"; };
+		F739BB5D24C58D8100FFE16B /* OPJSONTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPJSONTestCase.m; sourceTree = "<group>"; };
+		F739BB5F24C58DDE00FFE16B /* certificate.pfx */ = {isa = PBXFileReference; lastKnownFileType = file; path = certificate.pfx; sourceTree = "<group>"; };
+		F739BB6024C58DDE00FFE16B /* paymentProductGroups.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProductGroups.json; sourceTree = "<group>"; };
+		F739BB6124C58DDE00FFE16B /* paymentProductMissingFields.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProductMissingFields.json; sourceTree = "<group>"; };
+		F739BB6224C58DDE00FFE16B /* paymentProducts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProducts.json; sourceTree = "<group>"; };
+		F739BB6324C58DDE00FFE16B /* paymentProductGroup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProductGroup.json; sourceTree = "<group>"; };
+		F739BB6424C58DDE00FFE16B /* paymentProduct.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = paymentProduct.json; sourceTree = "<group>"; };
+		F739BB6B24C58DF900FFE16B /* OPNetworkingWrapperTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPNetworkingWrapperTestCase.m; sourceTree = "<group>"; };
+		F739BB6D24C58E6500FFE16B /* OPAccountOnFileTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountOnFileTestCase.m; sourceTree = "<group>"; };
+		F739BB6E24C58E6500FFE16B /* OPValidatorRegularExpressionTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorRegularExpressionTestCase.m; sourceTree = "<group>"; };
+		F739BB6F24C58E6500FFE16B /* OPPaymentProductsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductsTestCase.m; sourceTree = "<group>"; };
+		F739BB7024C58E6500FFE16B /* OPValidatorRangeTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorRangeTestCase.m; sourceTree = "<group>"; };
+		F739BB7124C58E6500FFE16B /* OPValidatorEmailAddressTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorEmailAddressTestCase.m; sourceTree = "<group>"; };
+		F739BB7224C58E6500FFE16B /* OPPaymentProductFieldTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductFieldTestCase.m; sourceTree = "<group>"; };
+		F739BB7324C58E6500FFE16B /* OPValidatorExpirationDateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorExpirationDateTestCase.m; sourceTree = "<group>"; };
+		F739BB7424C58E6500FFE16B /* OPPaymentProductFieldsTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductFieldsTestCase.m; sourceTree = "<group>"; };
+		F739BB7524C58E6500FFE16B /* OPAccountOnFileAttributesTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountOnFileAttributesTestCase.m; sourceTree = "<group>"; };
+		F739BB7624C58E6500FFE16B /* OPPaymentRequestTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentRequestTestCase.m; sourceTree = "<group>"; };
+		F739BB7824C58E6500FFE16B /* OPValidatorFixedListTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorFixedListTestCase.m; sourceTree = "<group>"; };
+		F739BB7924C58E6500FFE16B /* OPBasicPaymentProductTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductTestCase.m; sourceTree = "<group>"; };
+		F739BB7A24C58E6500FFE16B /* OPAccountsOnFileTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountsOnFileTestCase.m; sourceTree = "<group>"; };
+		F739BB7C24C58E6500FFE16B /* OPLabelTemplateTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLabelTemplateTestCase.m; sourceTree = "<group>"; };
+		F739BB7D24C58E6600FFE16B /* OPValidatorLengthTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorLengthTestCase.m; sourceTree = "<group>"; };
+		F739BB7E24C58E6600FFE16B /* OPValidatorLuhnTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorLuhnTestCase.m; sourceTree = "<group>"; };
+		F739BB7F24C58E6600FFE16B /* OPPaymentProductTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductTestCase.m; sourceTree = "<group>"; };
+		F74A8CB624C19D7400FEE8F1 /* OnlinePaymentsSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OnlinePaymentsSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74A8CB924C19D7400FEE8F1 /* OnlinePaymentsSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OnlinePaymentsSDK.h; sourceTree = "<group>"; };
+		F74A8CBA24C19D7400FEE8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74A8CBF24C19D7400FEE8F1 /* OnlinePaymentsSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlinePaymentsSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74A8CC624C19D7400FEE8F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F74A8CDB24C1A30900FEE8F1 /* OPUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPUtil.h; sourceTree = "<group>"; };
+		F74A8CDC24C1A30900FEE8F1 /* OPUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPUtil.m; sourceTree = "<group>"; };
+		F74A8CDF24C1A3C700FEE8F1 /* OPAssetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAssetManager.h; sourceTree = "<group>"; };
+		F74A8CE024C1A3C700FEE8F1 /* OPAssetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAssetManager.m; sourceTree = "<group>"; };
+		F74A8CE324C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPC2SCommunicatorConfiguration.h; sourceTree = "<group>"; };
+		F74A8CE424C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPC2SCommunicatorConfiguration.m; sourceTree = "<group>"; };
+		F74A8CE724C1A51C00FEE8F1 /* OPC2SCommunicator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPC2SCommunicator.h; sourceTree = "<group>"; };
+		F74A8CE824C1A51C00FEE8F1 /* OPC2SCommunicator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPC2SCommunicator.m; sourceTree = "<group>"; };
+		F74A8CEB24C1A89B00FEE8F1 /* OPSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPSession.h; sourceTree = "<group>"; };
+		F74A8CEC24C1A89B00FEE8F1 /* OPSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPSession.m; sourceTree = "<group>"; };
+		F74A8CEF24C1B6F100FEE8F1 /* OPBase64.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPBase64.h; sourceTree = "<group>"; };
+		F74A8CF024C1B6F100FEE8F1 /* OPBase64.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPBase64.m; sourceTree = "<group>"; };
+		F74A8CF324C1B77800FEE8F1 /* OPSDKConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPSDKConstants.h; sourceTree = "<group>"; };
+		F74A8CF724C1B7C900FEE8F1 /* OPPaymentContextConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentContextConverter.m; sourceTree = "<group>"; };
+		F74A8CFA24C1B7C900FEE8F1 /* OPBasicPaymentItemConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentItemConverter.h; sourceTree = "<group>"; };
+		F74A8CFB24C1B7C900FEE8F1 /* OPIINDetailsResponseConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPIINDetailsResponseConverter.h; sourceTree = "<group>"; };
+		F74A8CFC24C1B7C900FEE8F1 /* OPPaymentProductConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductConverter.m; sourceTree = "<group>"; };
+		F74A8CFD24C1B7C900FEE8F1 /* OPBasicPaymentItemConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentItemConverter.m; sourceTree = "<group>"; };
+		F74A8CFF24C1B7CA00FEE8F1 /* OPPaymentProductConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductConverter.h; sourceTree = "<group>"; };
+		F74A8D0124C1B7CA00FEE8F1 /* OPPaymentItemConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentItemConverter.h; sourceTree = "<group>"; };
+		F74A8D0224C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentProductConverter.h; sourceTree = "<group>"; };
+		F74A8D0324C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductsConverter.m; sourceTree = "<group>"; };
+		F74A8D0524C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductConverter.m; sourceTree = "<group>"; };
+		F74A8D0724C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPIINDetailsResponseConverter.m; sourceTree = "<group>"; };
+		F74A8D0A24C1B7CA00FEE8F1 /* OPPaymentItemConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentItemConverter.m; sourceTree = "<group>"; };
+		F74A8D0C24C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentProductsConverter.h; sourceTree = "<group>"; };
+		F74A8D0E24C1B7CA00FEE8F1 /* OPPaymentContextConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentContextConverter.h; sourceTree = "<group>"; };
+		F74A8D2724C1BB1300FEE8F1 /* OPEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPEncryptor.h; sourceTree = "<group>"; };
+		F74A8D2824C1BB1300FEE8F1 /* OPEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPEncryptor.m; sourceTree = "<group>"; };
+		F74A8D2B24C1BB7F00FEE8F1 /* OPJOSEEncryptor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPJOSEEncryptor.h; sourceTree = "<group>"; };
+		F74A8D2C24C1BB7F00FEE8F1 /* OPJOSEEncryptor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPJOSEEncryptor.m; sourceTree = "<group>"; };
+		F74A8D2F24C1BBDD00FEE8F1 /* OPPreferredInputType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPreferredInputType.h; sourceTree = "<group>"; };
+		F74A8D3024C1BBDD00FEE8F1 /* OPAccountOnFileAttributeStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAccountOnFileAttributeStatus.h; sourceTree = "<group>"; };
+		F74A8D3124C1BBDD00FEE8F1 /* OPFormElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormElementType.h; sourceTree = "<group>"; };
+		F74A8D3424C1BBDD00FEE8F1 /* OPIINStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPIINStatus.h; sourceTree = "<group>"; };
+		F74A8D3524C1BBDE00FEE8F1 /* OPType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPType.h; sourceTree = "<group>"; };
+		F74A8D3D24C1BCF100FEE8F1 /* OPStringFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPStringFormatter.h; sourceTree = "<group>"; };
+		F74A8D3E24C1BCF100FEE8F1 /* OPStringFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPStringFormatter.m; sourceTree = "<group>"; };
+		F74A8D4124C1BD4900FEE8F1 /* OPJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPJSON.h; sourceTree = "<group>"; };
+		F74A8D4224C1BD4900FEE8F1 /* OPJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPJSON.m; sourceTree = "<group>"; };
+		F74A8D4524C1BDBB00FEE8F1 /* OPMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPMacros.h; sourceTree = "<group>"; };
+		F74A8EDA24C1BE0800FEE8F1 /* OPBasicPaymentItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentItem.h; sourceTree = "<group>"; };
+		F74A8EDB24C1BE2F00FEE8F1 /* OPPaymentItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentItem.h; sourceTree = "<group>"; };
+		F74A8EE124C1BEF400FEE8F1 /* OPNetworkingWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPNetworkingWrapper.h; sourceTree = "<group>"; };
+		F74A8EE224C1BEF400FEE8F1 /* OPNetworkingWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPNetworkingWrapper.m; sourceTree = "<group>"; };
+		F74A8EE524C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPAFNetworkingWrapper.h; sourceTree = "<group>"; };
+		F74A8EE624C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPAFNetworkingWrapper.m; sourceTree = "<group>"; };
+		F74A8EE924C1BF2700FEE8F1 /* OPNetworkingActivityLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPNetworkingActivityLogger.h; sourceTree = "<group>"; };
+		F74A8EEA24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPNetworkingActivityLogger.m; sourceTree = "<group>"; };
+		F74A8EED24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPNetworkingActivityConsoleLogger.h; sourceTree = "<group>"; };
+		F74A8EEE24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPNetworkingActivityConsoleLogger.m; sourceTree = "<group>"; };
+		F74A8EF124C1C04600FEE8F1 /* OPNetworkingActivityLoggerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPNetworkingActivityLoggerProtocol.h; sourceTree = "<group>"; };
+		F74A8EFA24C1C75C00FEE8F1 /* OPPaymentContext.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentContext.h; sourceTree = "<group>"; };
+		F74A8EFB24C1C75C00FEE8F1 /* OPPaymentContext.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentContext.m; sourceTree = "<group>"; };
+		F74A8EFE24C1C77100FEE8F1 /* OPPaymentAmountOfMoney.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentAmountOfMoney.h; sourceTree = "<group>"; };
+		F74A8EFF24C1C77200FEE8F1 /* OPPaymentAmountOfMoney.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentAmountOfMoney.m; sourceTree = "<group>"; };
+		F74A8F1224C1D79400FEE8F1 /* OPIINDetailsResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPIINDetailsResponse.h; sourceTree = "<group>"; };
+		F74A8F1324C1D79400FEE8F1 /* OPIINDetailsResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPIINDetailsResponse.m; sourceTree = "<group>"; };
+		F74A8F1624C1D7F600FEE8F1 /* OPIINDetail.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPIINDetail.h; sourceTree = "<group>"; };
+		F74A8F1724C1D7F600FEE8F1 /* OPIINDetail.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPIINDetail.m; sourceTree = "<group>"; };
+		F74A8F1B24C1D88500FEE8F1 /* OPPaymentRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPaymentRequest.h; sourceTree = "<group>"; };
+		F74A8F1C24C1D88500FEE8F1 /* OPPaymentRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentRequest.m; sourceTree = "<group>"; };
+		F74A8F1F24C1D90D00FEE8F1 /* OPPreparedPaymentRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPreparedPaymentRequest.h; sourceTree = "<group>"; };
+		F74A8F2024C1D90D00FEE8F1 /* OPPreparedPaymentRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPreparedPaymentRequest.m; sourceTree = "<group>"; };
+		F74A8F2324C1D94400FEE8F1 /* OPPublicKeyResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OPPublicKeyResponse.h; sourceTree = "<group>"; };
+		F74A8F2424C1D94400FEE8F1 /* OPPublicKeyResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPublicKeyResponse.m; sourceTree = "<group>"; };
+		F74A8F2724C1D98F00FEE8F1 /* OPValidationErrorRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorRegularExpression.h; sourceTree = "<group>"; };
+		F74A8F2824C1D98F00FEE8F1 /* OPValidationErrorEmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorEmailAddress.m; sourceTree = "<group>"; };
+		F74A8F2924C1D98F00FEE8F1 /* OPValidationErrorExpirationDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorExpirationDate.m; sourceTree = "<group>"; };
+		F74A8F2A24C1D99000FEE8F1 /* OPValidationErrorLuhn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorLuhn.m; sourceTree = "<group>"; };
+		F74A8F2B24C1D99000FEE8F1 /* OPValidationErrorLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorLength.m; sourceTree = "<group>"; };
+		F74A8F2C24C1D99000FEE8F1 /* OPValidationErrorAllowed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorAllowed.m; sourceTree = "<group>"; };
+		F74A8F2D24C1D99000FEE8F1 /* OPValidationErrorAllowed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorAllowed.h; sourceTree = "<group>"; };
+		F74A8F2E24C1D99000FEE8F1 /* OPValidationErrorExpirationDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorExpirationDate.h; sourceTree = "<group>"; };
+		F74A8F2F24C1D99000FEE8F1 /* OPValidationErrorIsRequired.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorIsRequired.h; sourceTree = "<group>"; };
+		F74A8F3024C1D99000FEE8F1 /* OPValidationError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationError.h; sourceTree = "<group>"; };
+		F74A8F3124C1D99000FEE8F1 /* OPValidationErrorInteger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorInteger.h; sourceTree = "<group>"; };
+		F74A8F3224C1D99000FEE8F1 /* OPValidationError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationError.m; sourceTree = "<group>"; };
+		F74A8F3324C1D99000FEE8F1 /* OPValidationErrorNumericString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorNumericString.h; sourceTree = "<group>"; };
+		F74A8F3424C1D99000FEE8F1 /* OPValidationErrorRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorRegularExpression.m; sourceTree = "<group>"; };
+		F74A8F3524C1D99000FEE8F1 /* OPValidationErrorFixedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorFixedList.h; sourceTree = "<group>"; };
+		F74A8F3624C1D99000FEE8F1 /* OPValidationErrorIBAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorIBAN.m; sourceTree = "<group>"; };
+		F74A8F3724C1D99100FEE8F1 /* OPValidationErrorNumericString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorNumericString.m; sourceTree = "<group>"; };
+		F74A8F3824C1D99100FEE8F1 /* OPValidationErrorIsRequired.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorIsRequired.m; sourceTree = "<group>"; };
+		F74A8F3924C1D99100FEE8F1 /* OPValidationErrorRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorRange.h; sourceTree = "<group>"; };
+		F74A8F3A24C1D99100FEE8F1 /* OPValidationErrorEmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorEmailAddress.h; sourceTree = "<group>"; };
+		F74A8F3B24C1D99100FEE8F1 /* OPValidationErrorFixedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorFixedList.m; sourceTree = "<group>"; };
+		F74A8F3C24C1D99100FEE8F1 /* OPValidationErrorRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorRange.m; sourceTree = "<group>"; };
+		F74A8F3D24C1D99100FEE8F1 /* OPValidationErrorTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorTermsAndConditions.h; sourceTree = "<group>"; };
+		F74A8F3E24C1D99100FEE8F1 /* OPValidationErrorLuhn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorLuhn.h; sourceTree = "<group>"; };
+		F74A8F3F24C1D99100FEE8F1 /* OPValidationErrorInteger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorInteger.m; sourceTree = "<group>"; };
+		F74A8F4024C1D99100FEE8F1 /* OPValidationErrorIBAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorIBAN.h; sourceTree = "<group>"; };
+		F74A8F4124C1D99100FEE8F1 /* OPValidationErrorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidationErrorTermsAndConditions.m; sourceTree = "<group>"; };
+		F74A8F4224C1D99100FEE8F1 /* OPValidationErrorLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidationErrorLength.h; sourceTree = "<group>"; };
+		F74A8F5F24C1DC8900FEE8F1 /* OPValidatorFixedList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorFixedList.m; sourceTree = "<group>"; };
+		F74A8F6024C1DC8900FEE8F1 /* OPValidatorLuhn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorLuhn.h; sourceTree = "<group>"; };
+		F74A8F6124C1DC8900FEE8F1 /* OPValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidator.m; sourceTree = "<group>"; };
+		F74A8F6224C1DC8900FEE8F1 /* OPValidatorEmailAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorEmailAddress.h; sourceTree = "<group>"; };
+		F74A8F6324C1DC8900FEE8F1 /* OPValidatorRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorRange.h; sourceTree = "<group>"; };
+		F74A8F6424C1DC8A00FEE8F1 /* OPValidatorRegularExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorRegularExpression.h; sourceTree = "<group>"; };
+		F74A8F6524C1DC8A00FEE8F1 /* OPValidatorRegularExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorRegularExpression.m; sourceTree = "<group>"; };
+		F74A8F6624C1DC8A00FEE8F1 /* OPValidators.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidators.m; sourceTree = "<group>"; };
+		F74A8F6724C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorTermsAndConditions.h; sourceTree = "<group>"; };
+		F74A8F6824C1DC8A00FEE8F1 /* OPValidatorLuhn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorLuhn.m; sourceTree = "<group>"; };
+		F74A8F6924C1DC8A00FEE8F1 /* OPValueMappingItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValueMappingItem.m; sourceTree = "<group>"; };
+		F74A8F6A24C1DC8A00FEE8F1 /* OPValidators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidators.h; sourceTree = "<group>"; };
+		F74A8F6B24C1DC8A00FEE8F1 /* OPValueMappingItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValueMappingItem.h; sourceTree = "<group>"; };
+		F74A8F6C24C1DC8A00FEE8F1 /* OPValidatorRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorRange.m; sourceTree = "<group>"; };
+		F74A8F6D24C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorTermsAndConditions.m; sourceTree = "<group>"; };
+		F74A8F6E24C1DC8A00FEE8F1 /* OPValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidator.h; sourceTree = "<group>"; };
+		F74A8F7124C1DC8B00FEE8F1 /* OPValidatorExpirationDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorExpirationDate.m; sourceTree = "<group>"; };
+		F74A8F7224C1DC8B00FEE8F1 /* OPValidatorLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorLength.h; sourceTree = "<group>"; };
+		F74A8F7324C1DC8B00FEE8F1 /* OPValidatorExpirationDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorExpirationDate.h; sourceTree = "<group>"; };
+		F74A8F7424C1DC8B00FEE8F1 /* OPValidatorLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorLength.m; sourceTree = "<group>"; };
+		F74A8F7524C1DC8B00FEE8F1 /* OPValidatorFixedList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorFixedList.h; sourceTree = "<group>"; };
+		F74A8F7624C1DC8B00FEE8F1 /* OPValidatorEmailAddress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorEmailAddress.m; sourceTree = "<group>"; };
+		F74A8F8F24C1E15800FEE8F1 /* OPPaymentProduct302SpecificData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProduct302SpecificData.h; sourceTree = "<group>"; };
+		F74A8F9124C1E15800FEE8F1 /* OPPaymentProduct302SpecificData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProduct302SpecificData.m; sourceTree = "<group>"; };
+		F74A8F9424C1E15900FEE8F1 /* OPDisplayElementType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDisplayElementType.h; sourceTree = "<group>"; };
+		F74A8F9724C1E15900FEE8F1 /* OPDisplayElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDisplayElement.h; sourceTree = "<group>"; };
+		F74A8F9924C1E15900FEE8F1 /* OPDisplayElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDisplayElement.m; sourceTree = "<group>"; };
+		F74A8F9C24C1E15900FEE8F1 /* OPDisplayElementsConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDisplayElementsConverter.h; sourceTree = "<group>"; };
+		F74A8F9D24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDisplayElementsConverter.m; sourceTree = "<group>"; };
+		F74A914224C1E19300FEE8F1 /* OPBasicPaymentProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductGroup.m; sourceTree = "<group>"; };
+		F74A914324C1E19300FEE8F1 /* OPLabelTemplate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLabelTemplate.m; sourceTree = "<group>"; };
+		F74A914424C1E19300FEE8F1 /* OPBasicPaymentProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProduct.m; sourceTree = "<group>"; };
+		F74A914524C1E19300FEE8F1 /* OPBasicPaymentProducts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProducts.m; sourceTree = "<group>"; };
+		F74A914624C1E19300FEE8F1 /* OPPaymentProductField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductField.h; sourceTree = "<group>"; };
+		F74A914724C1E19400FEE8F1 /* OPPaymentProductField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductField.m; sourceTree = "<group>"; };
+		F74A914824C1E19400FEE8F1 /* OPAccountOnFileAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAccountOnFileAttributes.h; sourceTree = "<group>"; };
+		F74A914924C1E19400FEE8F1 /* OPAccountOnFileAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountOnFileAttribute.m; sourceTree = "<group>"; };
+		F74A914A24C1E19400FEE8F1 /* OPPaymentProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProduct.h; sourceTree = "<group>"; };
+		F74A914B24C1E19400FEE8F1 /* OPToolTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPToolTip.h; sourceTree = "<group>"; };
+		F74A914C24C1E19400FEE8F1 /* OPPaymentItemDisplayHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentItemDisplayHints.m; sourceTree = "<group>"; };
+		F74A914D24C1E19400FEE8F1 /* OPToolTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPToolTip.m; sourceTree = "<group>"; };
+		F74A914E24C1E19400FEE8F1 /* OPBasicPaymentProductGroups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentProductGroups.h; sourceTree = "<group>"; };
+		F74A914F24C1E19400FEE8F1 /* OPAccountOnFileAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountOnFileAttributes.m; sourceTree = "<group>"; };
+		F74A915024C1E19500FEE8F1 /* OPFormElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPFormElement.h; sourceTree = "<group>"; };
+		F74A915124C1E19500FEE8F1 /* OPAccountOnFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountOnFile.m; sourceTree = "<group>"; };
+		F74A915224C1E19500FEE8F1 /* OPBasicPaymentProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentProduct.h; sourceTree = "<group>"; };
+		F74A915324C1E19500FEE8F1 /* OPDataRestrictions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPDataRestrictions.m; sourceTree = "<group>"; };
+		F74A915424C1E19500FEE8F1 /* OPPaymentProductFieldDisplayHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductFieldDisplayHints.m; sourceTree = "<group>"; };
+		F74A915524C1E19500FEE8F1 /* OPDataRestrictions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPDataRestrictions.h; sourceTree = "<group>"; };
+		F74A915624C1E19500FEE8F1 /* OPAccountOnFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAccountOnFile.h; sourceTree = "<group>"; };
+		F74A915724C1E19500FEE8F1 /* OPPaymentProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProduct.m; sourceTree = "<group>"; };
+		F74A915824C1E19500FEE8F1 /* OPPaymentProductNetworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductNetworks.m; sourceTree = "<group>"; };
+		F74A915924C1E19500FEE8F1 /* OPAccountOnFileDisplayHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAccountOnFileDisplayHints.h; sourceTree = "<group>"; };
+		F74A915A24C1E19600FEE8F1 /* OPPaymentProductFields.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductFields.m; sourceTree = "<group>"; };
+		F74A915B24C1E19600FEE8F1 /* OPAccountOnFileAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAccountOnFileAttribute.h; sourceTree = "<group>"; };
+		F74A915C24C1E19600FEE8F1 /* OPPaymentProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductGroup.h; sourceTree = "<group>"; };
+		F74A915D24C1E19600FEE8F1 /* OPBasicPaymentProductGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentProductGroup.h; sourceTree = "<group>"; };
+		F74A915E24C1E19600FEE8F1 /* OPBasicPaymentProductGroups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductGroups.m; sourceTree = "<group>"; };
+		F74A915F24C1E19600FEE8F1 /* OPPaymentProductNetworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductNetworks.h; sourceTree = "<group>"; };
+		F74A916024C1E19600FEE8F1 /* OPPaymentItems.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentItems.m; sourceTree = "<group>"; };
+		F74A916124C1E19600FEE8F1 /* OPLabelTemplateItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLabelTemplateItem.h; sourceTree = "<group>"; };
+		F74A916224C1E19700FEE8F1 /* OPPaymentItems.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentItems.h; sourceTree = "<group>"; };
+		F74A916324C1E19700FEE8F1 /* OPFormElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPFormElement.m; sourceTree = "<group>"; };
+		F74A916424C1E19700FEE8F1 /* OPPaymentProductFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductFields.h; sourceTree = "<group>"; };
+		F74A916524C1E19700FEE8F1 /* OPPaymentProductGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductGroup.m; sourceTree = "<group>"; };
+		F74A916624C1E19700FEE8F1 /* OPPaymentItemDisplayHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentItemDisplayHints.h; sourceTree = "<group>"; };
+		F74A916724C1E19700FEE8F1 /* OPAccountsOnFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountsOnFile.m; sourceTree = "<group>"; };
+		F74A916824C1E19700FEE8F1 /* OPLabelTemplateItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPLabelTemplateItem.m; sourceTree = "<group>"; };
+		F74A916924C1E19700FEE8F1 /* OPLabelTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPLabelTemplate.h; sourceTree = "<group>"; };
+		F74A916A24C1E19700FEE8F1 /* OPAccountsOnFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPAccountsOnFile.h; sourceTree = "<group>"; };
+		F74A916B24C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPAccountOnFileDisplayHints.m; sourceTree = "<group>"; };
+		F74A916C24C1E19800FEE8F1 /* OPBasicPaymentProducts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPBasicPaymentProducts.h; sourceTree = "<group>"; };
+		F74A916D24C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPPaymentProductFieldDisplayHints.h; sourceTree = "<group>"; };
+		F74A919B24C1EF5900FEE8F1 /* OPValidatorIBAN.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OPValidatorIBAN.h; sourceTree = "<group>"; };
+		F74A919C24C1EF5900FEE8F1 /* OPValidatorIBAN.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OPValidatorIBAN.m; sourceTree = "<group>"; };
+		F74A91A824C2F54F00FEE8F1 /* OPUtilTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPUtilTestCase.m; sourceTree = "<group>"; };
+		F74A91AC24C2F5E700FEE8F1 /* OPC2SCommunicatorTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPC2SCommunicatorTestCase.m; sourceTree = "<group>"; };
+		F74DA18024CF05B8002B6DE6 /* OnlinePaymentsSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = OnlinePaymentsSDK.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F74A8CB324C19D7400FEE8F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74A8CBC24C19D7400FEE8F1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74A8CC024C19D7400FEE8F1 /* OnlinePaymentsSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F74A8CAC24C19D7400FEE8F1 = {
+			isa = PBXGroup;
+			children = (
+				F74A8CB824C19D7400FEE8F1 /* OnlinePaymentsSDK */,
+				F74A8CC324C19D7400FEE8F1 /* OnlinePaymentsSDKTests */,
+				F74A8CB724C19D7400FEE8F1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F74A8CB724C19D7400FEE8F1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8CB624C19D7400FEE8F1 /* OnlinePaymentsSDK.framework */,
+				F74A8CBF24C19D7400FEE8F1 /* OnlinePaymentsSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F74A8CB824C19D7400FEE8F1 /* OnlinePaymentsSDK */ = {
+			isa = PBXGroup;
+			children = (
+				F74DA16624CEE27C002B6DE6 /* Base64 */,
+				F74DA16724CEE28C002B6DE6 /* Constants */,
+				F74DA16824CEE29B002B6DE6 /* Converters */,
+				F74DA16924CEE2AC002B6DE6 /* Cryptography */,
+				F74DA16A24CEE2C7002B6DE6 /* Enumerations */,
+				F74DA16B24CEE2D9002B6DE6 /* Formatters */,
+				F74DA17024CEE33F002B6DE6 /* JSON */,
+				F74DA17124CEE352002B6DE6 /* Macros */,
+				F74DA17224CEE364002B6DE6 /* Models */,
+				F74DA17324CEE373002B6DE6 /* Protocols */,
+				F74DA17424CEE389002B6DE6 /* Wrappers */,
+				F74A8CB924C19D7400FEE8F1 /* OnlinePaymentsSDK.h */,
+				F74A8CDF24C1A3C700FEE8F1 /* OPAssetManager.h */,
+				F74A8CE024C1A3C700FEE8F1 /* OPAssetManager.m */,
+				F74A8CE724C1A51C00FEE8F1 /* OPC2SCommunicator.h */,
+				F74A8CE824C1A51C00FEE8F1 /* OPC2SCommunicator.m */,
+				F74A8CE324C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.h */,
+				F74A8CE424C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.m */,
+				F74A8CEB24C1A89B00FEE8F1 /* OPSession.h */,
+				F74A8CEC24C1A89B00FEE8F1 /* OPSession.m */,
+				F74A8CDB24C1A30900FEE8F1 /* OPUtil.h */,
+				F74A8CDC24C1A30900FEE8F1 /* OPUtil.m */,
+				F74A8CBA24C19D7400FEE8F1 /* Info.plist */,
+				F74DA18024CF05B8002B6DE6 /* OnlinePaymentsSDK.bundle */,
+			);
+			path = OnlinePaymentsSDK;
+			sourceTree = "<group>";
+		};
+		F74A8CC324C19D7400FEE8F1 /* OnlinePaymentsSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				F74A91A324C2F4F700FEE8F1 /* Base64 */,
+				F74A91A124C2F4EC00FEE8F1 /* Converters */,
+				F74A91A524C2F50800FEE8F1 /* Cryptography */,
+				F74A91A224C2F4F000FEE8F1 /* Formatters */,
+				F74A91A424C2F4FE00FEE8F1 /* JSON */,
+				F74A91A024C2F4E500FEE8F1 /* Models */,
+				F74A919F24C2F4D400FEE8F1 /* Supporting Files */,
+				F74A91A724C2F51500FEE8F1 /* Wrappers */,
+				F74A91AC24C2F5E700FEE8F1 /* OPC2SCommunicatorTestCase.m */,
+				F74A91A824C2F54F00FEE8F1 /* OPUtilTestCase.m */,
+				F74A8CC624C19D7400FEE8F1 /* Info.plist */,
+			);
+			path = OnlinePaymentsSDKTests;
+			sourceTree = "<group>";
+		};
+		F74A919F24C2F4D400FEE8F1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB5F24C58DDE00FFE16B /* certificate.pfx */,
+				F739BB6424C58DDE00FFE16B /* paymentProduct.json */,
+				F739BB6324C58DDE00FFE16B /* paymentProductGroup.json */,
+				F739BB6024C58DDE00FFE16B /* paymentProductGroups.json */,
+				F739BB6124C58DDE00FFE16B /* paymentProductMissingFields.json */,
+				F739BB6224C58DDE00FFE16B /* paymentProducts.json */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F74A91A024C2F4E500FEE8F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB7524C58E6500FFE16B /* OPAccountOnFileAttributesTestCase.m */,
+				F739BB6D24C58E6500FFE16B /* OPAccountOnFileTestCase.m */,
+				F739BB7A24C58E6500FFE16B /* OPAccountsOnFileTestCase.m */,
+				F739BB7924C58E6500FFE16B /* OPBasicPaymentProductTestCase.m */,
+				F739BB7C24C58E6500FFE16B /* OPLabelTemplateTestCase.m */,
+				F739BB7424C58E6500FFE16B /* OPPaymentProductFieldsTestCase.m */,
+				F739BB7224C58E6500FFE16B /* OPPaymentProductFieldTestCase.m */,
+				F739BB6F24C58E6500FFE16B /* OPPaymentProductsTestCase.m */,
+				F739BB7F24C58E6600FFE16B /* OPPaymentProductTestCase.m */,
+				F739BB7624C58E6500FFE16B /* OPPaymentRequestTestCase.m */,
+				F739BB7124C58E6500FFE16B /* OPValidatorEmailAddressTestCase.m */,
+				F739BB7324C58E6500FFE16B /* OPValidatorExpirationDateTestCase.m */,
+				F739BB7824C58E6500FFE16B /* OPValidatorFixedListTestCase.m */,
+				F739BB7D24C58E6600FFE16B /* OPValidatorLengthTestCase.m */,
+				F739BB7E24C58E6600FFE16B /* OPValidatorLuhnTestCase.m */,
+				F739BB7024C58E6500FFE16B /* OPValidatorRangeTestCase.m */,
+				F739BB6E24C58E6500FFE16B /* OPValidatorRegularExpressionTestCase.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F74A91A124C2F4EC00FEE8F1 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB4D24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m */,
+				F739BB5324C5827500FFE16B /* OPPaymentProductConverterTestCase.m */,
+				F739BB5524C582AA00FFE16B /* OPPaymentProductsConverterTestCase.m */,
+			);
+			path = Converters;
+			sourceTree = "<group>";
+		};
+		F74A91A224C2F4F000FEE8F1 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB5B24C58D4E00FFE16B /* OPStringFormatterTestCase.m */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		F74A91A324C2F4F700FEE8F1 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB4924C57C6000FFE16B /* OPBase64TestCase.m */,
+			);
+			path = Base64;
+			sourceTree = "<group>";
+		};
+		F74A91A424C2F4FE00FEE8F1 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB5D24C58D8100FFE16B /* OPJSONTestCase.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		F74A91A524C2F50800FEE8F1 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB5724C582F100FFE16B /* OPJOSEEncryptorTestCase.m */,
+				F739BB5924C5834500FFE16B /* OPEncryptorTestCase.m */,
+			);
+			path = Cryptography;
+			sourceTree = "<group>";
+		};
+		F74A91A724C2F51500FEE8F1 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				F739BB6B24C58DF900FFE16B /* OPNetworkingWrapperTestCase.m */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		F74DA16624CEE27C002B6DE6 /* Base64 */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8CEF24C1B6F100FEE8F1 /* OPBase64.h */,
+				F74A8CF024C1B6F100FEE8F1 /* OPBase64.m */,
+			);
+			name = Base64;
+			sourceTree = "<group>";
+		};
+		F74DA16724CEE28C002B6DE6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8CF324C1B77800FEE8F1 /* OPSDKConstants.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		F74DA16824CEE29B002B6DE6 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8CFA24C1B7C900FEE8F1 /* OPBasicPaymentItemConverter.h */,
+				F74A8CFD24C1B7C900FEE8F1 /* OPBasicPaymentItemConverter.m */,
+				F74A8D0224C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.h */,
+				F74A8D0524C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.m */,
+				F74A8D0C24C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.h */,
+				F74A8D0324C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.m */,
+				F74A8CFB24C1B7C900FEE8F1 /* OPIINDetailsResponseConverter.h */,
+				F74A8D0724C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.m */,
+				F74A8D0E24C1B7CA00FEE8F1 /* OPPaymentContextConverter.h */,
+				F74A8CF724C1B7C900FEE8F1 /* OPPaymentContextConverter.m */,
+				F74A8D0124C1B7CA00FEE8F1 /* OPPaymentItemConverter.h */,
+				F74A8D0A24C1B7CA00FEE8F1 /* OPPaymentItemConverter.m */,
+				F74A8CFF24C1B7CA00FEE8F1 /* OPPaymentProductConverter.h */,
+				F74A8CFC24C1B7C900FEE8F1 /* OPPaymentProductConverter.m */,
+			);
+			name = Converters;
+			sourceTree = "<group>";
+		};
+		F74DA16924CEE2AC002B6DE6 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8D2724C1BB1300FEE8F1 /* OPEncryptor.h */,
+				F74A8D2824C1BB1300FEE8F1 /* OPEncryptor.m */,
+				F74A8D2B24C1BB7F00FEE8F1 /* OPJOSEEncryptor.h */,
+				F74A8D2C24C1BB7F00FEE8F1 /* OPJOSEEncryptor.m */,
+			);
+			name = Cryptography;
+			sourceTree = "<group>";
+		};
+		F74DA16A24CEE2C7002B6DE6 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8D3024C1BBDD00FEE8F1 /* OPAccountOnFileAttributeStatus.h */,
+				F74A8D3124C1BBDD00FEE8F1 /* OPFormElementType.h */,
+				F74A8D3424C1BBDD00FEE8F1 /* OPIINStatus.h */,
+				F74A8D2F24C1BBDD00FEE8F1 /* OPPreferredInputType.h */,
+				F74A8D3524C1BBDE00FEE8F1 /* OPType.h */,
+			);
+			name = Enumerations;
+			sourceTree = "<group>";
+		};
+		F74DA16B24CEE2D9002B6DE6 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8D3D24C1BCF100FEE8F1 /* OPStringFormatter.h */,
+				F74A8D3E24C1BCF100FEE8F1 /* OPStringFormatter.m */,
+			);
+			name = Formatters;
+			sourceTree = "<group>";
+		};
+		F74DA17024CEE33F002B6DE6 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8D4124C1BD4900FEE8F1 /* OPJSON.h */,
+				F74A8D4224C1BD4900FEE8F1 /* OPJSON.m */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		F74DA17124CEE352002B6DE6 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8D4524C1BDBB00FEE8F1 /* OPMacros.h */,
+			);
+			name = Macros;
+			sourceTree = "<group>";
+		};
+		F74DA17224CEE364002B6DE6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F74DA17624CEE3D4002B6DE6 /* AccountOnFile */,
+				F74DA17724CEE3E3002B6DE6 /* C2SPaymentProductContext */,
+				F74DA17A24CEE40E002B6DE6 /* IINDetails */,
+				F74DA17B24CEE415002B6DE6 /* PaymentProducts */,
+				F74DA17C24CEE41D002B6DE6 /* PaymentRequests */,
+				F74DA17D24CEE431002B6DE6 /* PublicKeys */,
+				F74DA17F24CEE441002B6DE6 /* ValidationErrors */,
+				F74DA17E24CEE43B002B6DE6 /* Validators */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		F74DA17324CEE373002B6DE6 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8EDA24C1BE0800FEE8F1 /* OPBasicPaymentItem.h */,
+				F74A8EDB24C1BE2F00FEE8F1 /* OPPaymentItem.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		F74DA17424CEE389002B6DE6 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				F74DA17524CEE39F002B6DE6 /* NetworkingLogger */,
+				F74A8EE524C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.h */,
+				F74A8EE624C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.m */,
+				F74A8EE124C1BEF400FEE8F1 /* OPNetworkingWrapper.h */,
+				F74A8EE224C1BEF400FEE8F1 /* OPNetworkingWrapper.m */,
+			);
+			name = Wrappers;
+			sourceTree = "<group>";
+		};
+		F74DA17524CEE39F002B6DE6 /* NetworkingLogger */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8EE924C1BF2700FEE8F1 /* OPNetworkingActivityLogger.h */,
+				F74A8EEA24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.m */,
+				F74A8EED24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.h */,
+				F74A8EEE24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.m */,
+				F74A8EF124C1C04600FEE8F1 /* OPNetworkingActivityLoggerProtocol.h */,
+			);
+			name = NetworkingLogger;
+			sourceTree = "<group>";
+		};
+		F74DA17624CEE3D4002B6DE6 /* AccountOnFile */ = {
+			isa = PBXGroup;
+			children = (
+				F74A915624C1E19500FEE8F1 /* OPAccountOnFile.h */,
+				F74A915124C1E19500FEE8F1 /* OPAccountOnFile.m */,
+				F74A915B24C1E19600FEE8F1 /* OPAccountOnFileAttribute.h */,
+				F74A914924C1E19400FEE8F1 /* OPAccountOnFileAttribute.m */,
+				F74A914824C1E19400FEE8F1 /* OPAccountOnFileAttributes.h */,
+				F74A914F24C1E19400FEE8F1 /* OPAccountOnFileAttributes.m */,
+				F74A915924C1E19500FEE8F1 /* OPAccountOnFileDisplayHints.h */,
+				F74A916B24C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.m */,
+				F74A916A24C1E19700FEE8F1 /* OPAccountsOnFile.h */,
+				F74A916724C1E19700FEE8F1 /* OPAccountsOnFile.m */,
+			);
+			name = AccountOnFile;
+			sourceTree = "<group>";
+		};
+		F74DA17724CEE3E3002B6DE6 /* C2SPaymentProductContext */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8EFA24C1C75C00FEE8F1 /* OPPaymentContext.h */,
+				F74A8EFB24C1C75C00FEE8F1 /* OPPaymentContext.m */,
+				F74A8EFE24C1C77100FEE8F1 /* OPPaymentAmountOfMoney.h */,
+				F74A8EFF24C1C77200FEE8F1 /* OPPaymentAmountOfMoney.m */,
+			);
+			name = C2SPaymentProductContext;
+			sourceTree = "<group>";
+		};
+		F74DA17A24CEE40E002B6DE6 /* IINDetails */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8F1224C1D79400FEE8F1 /* OPIINDetailsResponse.h */,
+				F74A8F1324C1D79400FEE8F1 /* OPIINDetailsResponse.m */,
+				F74A8F1724C1D7F600FEE8F1 /* OPIINDetail.m */,
+			);
+			name = IINDetails;
+			sourceTree = "<group>";
+		};
+		F74DA17B24CEE415002B6DE6 /* PaymentProducts */ = {
+			isa = PBXGroup;
+			children = (
+				F74A915224C1E19500FEE8F1 /* OPBasicPaymentProduct.h */,
+				F74A8F1624C1D7F600FEE8F1 /* OPIINDetail.h */,
+				F74A914424C1E19300FEE8F1 /* OPBasicPaymentProduct.m */,
+				F74A915D24C1E19600FEE8F1 /* OPBasicPaymentProductGroup.h */,
+				F74A914224C1E19300FEE8F1 /* OPBasicPaymentProductGroup.m */,
+				F74A914E24C1E19400FEE8F1 /* OPBasicPaymentProductGroups.h */,
+				F74A915E24C1E19600FEE8F1 /* OPBasicPaymentProductGroups.m */,
+				F74A916C24C1E19800FEE8F1 /* OPBasicPaymentProducts.h */,
+				F74A914524C1E19300FEE8F1 /* OPBasicPaymentProducts.m */,
+				F74A915524C1E19500FEE8F1 /* OPDataRestrictions.h */,
+				F74A915324C1E19500FEE8F1 /* OPDataRestrictions.m */,
+				F74A8F9724C1E15900FEE8F1 /* OPDisplayElement.h */,
+				F74A8F9924C1E15900FEE8F1 /* OPDisplayElement.m */,
+				F74A8F9C24C1E15900FEE8F1 /* OPDisplayElementsConverter.h */,
+				F74A8F9D24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m */,
+				F74A8F9424C1E15900FEE8F1 /* OPDisplayElementType.h */,
+				F74A915024C1E19500FEE8F1 /* OPFormElement.h */,
+				F74A916324C1E19700FEE8F1 /* OPFormElement.m */,
+				F74A916924C1E19700FEE8F1 /* OPLabelTemplate.h */,
+				F74A914324C1E19300FEE8F1 /* OPLabelTemplate.m */,
+				F74A916124C1E19600FEE8F1 /* OPLabelTemplateItem.h */,
+				F74A916824C1E19700FEE8F1 /* OPLabelTemplateItem.m */,
+				F74A916624C1E19700FEE8F1 /* OPPaymentItemDisplayHints.h */,
+				F74A914C24C1E19400FEE8F1 /* OPPaymentItemDisplayHints.m */,
+				F74A916224C1E19700FEE8F1 /* OPPaymentItems.h */,
+				F74A916024C1E19600FEE8F1 /* OPPaymentItems.m */,
+				F74A914A24C1E19400FEE8F1 /* OPPaymentProduct.h */,
+				F74A915724C1E19500FEE8F1 /* OPPaymentProduct.m */,
+				F74A8F8F24C1E15800FEE8F1 /* OPPaymentProduct302SpecificData.h */,
+				F74A8F9124C1E15800FEE8F1 /* OPPaymentProduct302SpecificData.m */,
+				F74A914624C1E19300FEE8F1 /* OPPaymentProductField.h */,
+				F74A914724C1E19400FEE8F1 /* OPPaymentProductField.m */,
+				F74A916D24C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.h */,
+				F74A915424C1E19500FEE8F1 /* OPPaymentProductFieldDisplayHints.m */,
+				F74A916424C1E19700FEE8F1 /* OPPaymentProductFields.h */,
+				F74A915A24C1E19600FEE8F1 /* OPPaymentProductFields.m */,
+				F74A915C24C1E19600FEE8F1 /* OPPaymentProductGroup.h */,
+				F74A916524C1E19700FEE8F1 /* OPPaymentProductGroup.m */,
+				F74A915F24C1E19600FEE8F1 /* OPPaymentProductNetworks.h */,
+				F74A915824C1E19500FEE8F1 /* OPPaymentProductNetworks.m */,
+				F74A914B24C1E19400FEE8F1 /* OPToolTip.h */,
+				F74A914D24C1E19400FEE8F1 /* OPToolTip.m */,
+			);
+			name = PaymentProducts;
+			sourceTree = "<group>";
+		};
+		F74DA17C24CEE41D002B6DE6 /* PaymentRequests */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8F1B24C1D88500FEE8F1 /* OPPaymentRequest.h */,
+				F74A8F1C24C1D88500FEE8F1 /* OPPaymentRequest.m */,
+				F74A8F1F24C1D90D00FEE8F1 /* OPPreparedPaymentRequest.h */,
+				F74A8F2024C1D90D00FEE8F1 /* OPPreparedPaymentRequest.m */,
+			);
+			name = PaymentRequests;
+			sourceTree = "<group>";
+		};
+		F74DA17D24CEE431002B6DE6 /* PublicKeys */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8F2324C1D94400FEE8F1 /* OPPublicKeyResponse.h */,
+				F74A8F2424C1D94400FEE8F1 /* OPPublicKeyResponse.m */,
+			);
+			name = PublicKeys;
+			sourceTree = "<group>";
+		};
+		F74DA17E24CEE43B002B6DE6 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8F6E24C1DC8A00FEE8F1 /* OPValidator.h */,
+				F74A8F6124C1DC8900FEE8F1 /* OPValidator.m */,
+				F74A8F6224C1DC8900FEE8F1 /* OPValidatorEmailAddress.h */,
+				F74A8F7624C1DC8B00FEE8F1 /* OPValidatorEmailAddress.m */,
+				F74A8F7324C1DC8B00FEE8F1 /* OPValidatorExpirationDate.h */,
+				F74A8F7124C1DC8B00FEE8F1 /* OPValidatorExpirationDate.m */,
+				F74A8F7524C1DC8B00FEE8F1 /* OPValidatorFixedList.h */,
+				F74A8F5F24C1DC8900FEE8F1 /* OPValidatorFixedList.m */,
+				F74A919B24C1EF5900FEE8F1 /* OPValidatorIBAN.h */,
+				F74A919C24C1EF5900FEE8F1 /* OPValidatorIBAN.m */,
+				F74A8F7224C1DC8B00FEE8F1 /* OPValidatorLength.h */,
+				F74A8F7424C1DC8B00FEE8F1 /* OPValidatorLength.m */,
+				F74A8F6024C1DC8900FEE8F1 /* OPValidatorLuhn.h */,
+				F74A8F6824C1DC8A00FEE8F1 /* OPValidatorLuhn.m */,
+				F74A8F6324C1DC8900FEE8F1 /* OPValidatorRange.h */,
+				F74A8F6C24C1DC8A00FEE8F1 /* OPValidatorRange.m */,
+				F74A8F6424C1DC8A00FEE8F1 /* OPValidatorRegularExpression.h */,
+				F74A8F6524C1DC8A00FEE8F1 /* OPValidatorRegularExpression.m */,
+				F74A8F6A24C1DC8A00FEE8F1 /* OPValidators.h */,
+				F74A8F6624C1DC8A00FEE8F1 /* OPValidators.m */,
+				F74A8F6724C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.h */,
+				F74A8F6D24C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.m */,
+				F74A8F6B24C1DC8A00FEE8F1 /* OPValueMappingItem.h */,
+				F74A8F6924C1DC8A00FEE8F1 /* OPValueMappingItem.m */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		F74DA17F24CEE441002B6DE6 /* ValidationErrors */ = {
+			isa = PBXGroup;
+			children = (
+				F74A8F3024C1D99000FEE8F1 /* OPValidationError.h */,
+				F74A8F3224C1D99000FEE8F1 /* OPValidationError.m */,
+				F74A8F2D24C1D99000FEE8F1 /* OPValidationErrorAllowed.h */,
+				F74A8F2C24C1D99000FEE8F1 /* OPValidationErrorAllowed.m */,
+				F74A8F3A24C1D99100FEE8F1 /* OPValidationErrorEmailAddress.h */,
+				F74A8F2824C1D98F00FEE8F1 /* OPValidationErrorEmailAddress.m */,
+				F74A8F2E24C1D99000FEE8F1 /* OPValidationErrorExpirationDate.h */,
+				F74A8F2924C1D98F00FEE8F1 /* OPValidationErrorExpirationDate.m */,
+				F74A8F3524C1D99000FEE8F1 /* OPValidationErrorFixedList.h */,
+				F74A8F3B24C1D99100FEE8F1 /* OPValidationErrorFixedList.m */,
+				F74A8F4024C1D99100FEE8F1 /* OPValidationErrorIBAN.h */,
+				F74A8F3624C1D99000FEE8F1 /* OPValidationErrorIBAN.m */,
+				F74A8F3124C1D99000FEE8F1 /* OPValidationErrorInteger.h */,
+				F74A8F3F24C1D99100FEE8F1 /* OPValidationErrorInteger.m */,
+				F74A8F2F24C1D99000FEE8F1 /* OPValidationErrorIsRequired.h */,
+				F74A8F3824C1D99100FEE8F1 /* OPValidationErrorIsRequired.m */,
+				F74A8F4224C1D99100FEE8F1 /* OPValidationErrorLength.h */,
+				F74A8F2B24C1D99000FEE8F1 /* OPValidationErrorLength.m */,
+				F74A8F3E24C1D99100FEE8F1 /* OPValidationErrorLuhn.h */,
+				F74A8F2A24C1D99000FEE8F1 /* OPValidationErrorLuhn.m */,
+				F74A8F3324C1D99000FEE8F1 /* OPValidationErrorNumericString.h */,
+				F74A8F3724C1D99100FEE8F1 /* OPValidationErrorNumericString.m */,
+				F74A8F3924C1D99100FEE8F1 /* OPValidationErrorRange.h */,
+				F74A8F3C24C1D99100FEE8F1 /* OPValidationErrorRange.m */,
+				F74A8F2724C1D98F00FEE8F1 /* OPValidationErrorRegularExpression.h */,
+				F74A8F3424C1D99000FEE8F1 /* OPValidationErrorRegularExpression.m */,
+				F74A8F3D24C1D99100FEE8F1 /* OPValidationErrorTermsAndConditions.h */,
+				F74A8F4124C1D99100FEE8F1 /* OPValidationErrorTermsAndConditions.m */,
+			);
+			name = ValidationErrors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F74A8CB124C19D7400FEE8F1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74A8F1D24C1D88500FEE8F1 /* OPPaymentRequest.h in Headers */,
+				F74A8F4F24C1D99200FEE8F1 /* OPValidationErrorNumericString.h in Headers */,
+				F74A8F0024C1C77200FEE8F1 /* OPPaymentAmountOfMoney.h in Headers */,
+				F74A8D4324C1BD4900FEE8F1 /* OPJSON.h in Headers */,
+				F74A8D2624C1B7CA00FEE8F1 /* OPPaymentContextConverter.h in Headers */,
+				F74A8D3C24C1BBDE00FEE8F1 /* OPType.h in Headers */,
+				F74A8F5924C1D99200FEE8F1 /* OPValidationErrorTermsAndConditions.h in Headers */,
+				F74A918824C1E19800FEE8F1 /* OPPaymentProductGroup.h in Headers */,
+				F74A8F4324C1D99200FEE8F1 /* OPValidationErrorRegularExpression.h in Headers */,
+				F74A8D2424C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.h in Headers */,
+				F74A8CED24C1A89B00FEE8F1 /* OPSession.h in Headers */,
+				F74A917C24C1E19800FEE8F1 /* OPFormElement.h in Headers */,
+				F74A919224C1E19800FEE8F1 /* OPPaymentItemDisplayHints.h in Headers */,
+				F74A8F7B24C1DC8B00FEE8F1 /* OPValidatorRange.h in Headers */,
+				F74A8F5524C1D99200FEE8F1 /* OPValidationErrorRange.h in Headers */,
+				F74A8F7A24C1DC8B00FEE8F1 /* OPValidatorEmailAddress.h in Headers */,
+				F74A8D1924C1B7CA00FEE8F1 /* OPPaymentItemConverter.h in Headers */,
+				F74A8F4B24C1D99200FEE8F1 /* OPValidationErrorIsRequired.h in Headers */,
+				F74A8F5C24C1D99200FEE8F1 /* OPValidationErrorIBAN.h in Headers */,
+				F74A8F8D24C1DC8B00FEE8F1 /* OPValidatorFixedList.h in Headers */,
+				F74A91B024C2FFEA00FEE8F1 /* OPPaymentItem.h in Headers */,
+				F74A8CE524C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.h in Headers */,
+				F74A8F2124C1D90D00FEE8F1 /* OPPreparedPaymentRequest.h in Headers */,
+				F74A91AF24C2FFCD00FEE8F1 /* OPBasicPaymentItem.h in Headers */,
+				F74A919824C1E19800FEE8F1 /* OPBasicPaymentProducts.h in Headers */,
+				F74A8F4D24C1D99200FEE8F1 /* OPValidationErrorInteger.h in Headers */,
+				F74A919024C1E19800FEE8F1 /* OPPaymentProductFields.h in Headers */,
+				F74A8D3F24C1BCF100FEE8F1 /* OPStringFormatter.h in Headers */,
+				F74A8D2D24C1BB7F00FEE8F1 /* OPJOSEEncryptor.h in Headers */,
+				F74A8CF524C1B77800FEE8F1 /* OPSDKConstants.h in Headers */,
+				F74A8F5E24C1D99200FEE8F1 /* OPValidationErrorLength.h in Headers */,
+				F74A8EFC24C1C75C00FEE8F1 /* OPPaymentContext.h in Headers */,
+				F74A8CE924C1A51C00FEE8F1 /* OPC2SCommunicator.h in Headers */,
+				F74A8F8A24C1DC8B00FEE8F1 /* OPValidatorLength.h in Headers */,
+				F74A919924C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.h in Headers */,
+				F74A8F5124C1D99200FEE8F1 /* OPValidationErrorFixedList.h in Headers */,
+				F74A8CDD24C1A30900FEE8F1 /* OPUtil.h in Headers */,
+				F74A8D3824C1BBDE00FEE8F1 /* OPFormElementType.h in Headers */,
+				F74A919D24C1EF5900FEE8F1 /* OPValidatorIBAN.h in Headers */,
+				F74A8D1324C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.h in Headers */,
+				F74A918B24C1E19800FEE8F1 /* OPPaymentProductNetworks.h in Headers */,
+				F74A8D4624C1BDBB00FEE8F1 /* OPMacros.h in Headers */,
+				F74A8D2924C1BB1300FEE8F1 /* OPEncryptor.h in Headers */,
+				F74A8F5A24C1D99200FEE8F1 /* OPValidationErrorLuhn.h in Headers */,
+				F74A8CF124C1B6F100FEE8F1 /* OPBase64.h in Headers */,
+				F74A918124C1E19800FEE8F1 /* OPDataRestrictions.h in Headers */,
+				F74A8D1224C1B7CA00FEE8F1 /* OPBasicPaymentItemConverter.h in Headers */,
+				F74A918524C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.h in Headers */,
+				F74A8FAC24C1E15A00FEE8F1 /* OPDisplayElementsConverter.h in Headers */,
+				F74A8FA724C1E15A00FEE8F1 /* OPDisplayElement.h in Headers */,
+				F74A918924C1E19800FEE8F1 /* OPBasicPaymentProductGroup.h in Headers */,
+				F74A8F7C24C1DC8B00FEE8F1 /* OPValidatorRegularExpression.h in Headers */,
+				F74A8D3724C1BBDE00FEE8F1 /* OPAccountOnFileAttributeStatus.h in Headers */,
+				F74A8F1824C1D7F600FEE8F1 /* OPIINDetail.h in Headers */,
+				F74A8F5624C1D99200FEE8F1 /* OPValidationErrorEmailAddress.h in Headers */,
+				F74A8D3624C1BBDE00FEE8F1 /* OPPreferredInputType.h in Headers */,
+				F74A918724C1E19800FEE8F1 /* OPAccountOnFileAttribute.h in Headers */,
+				F74A917224C1E19800FEE8F1 /* OPPaymentProductField.h in Headers */,
+				F74A8F7824C1DC8B00FEE8F1 /* OPValidatorLuhn.h in Headers */,
+				F74A917724C1E19800FEE8F1 /* OPToolTip.h in Headers */,
+				F74A918D24C1E19800FEE8F1 /* OPLabelTemplateItem.h in Headers */,
+				F74A8F8624C1DC8B00FEE8F1 /* OPValidator.h in Headers */,
+				F74A917624C1E19800FEE8F1 /* OPPaymentProduct.h in Headers */,
+				F74A8CE124C1A3C700FEE8F1 /* OPAssetManager.h in Headers */,
+				F74A8D3B24C1BBDE00FEE8F1 /* OPIINStatus.h in Headers */,
+				F74A8F2524C1D94400FEE8F1 /* OPPublicKeyResponse.h in Headers */,
+				F74A917E24C1E19800FEE8F1 /* OPBasicPaymentProduct.h in Headers */,
+				F74A917424C1E19800FEE8F1 /* OPAccountOnFileAttributes.h in Headers */,
+				F74A919624C1E19800FEE8F1 /* OPAccountsOnFile.h in Headers */,
+				F74A8F7F24C1DC8B00FEE8F1 /* OPValidatorTermsAndConditions.h in Headers */,
+				F74A8F8B24C1DC8B00FEE8F1 /* OPValidatorExpirationDate.h in Headers */,
+				F74A8D1724C1B7CA00FEE8F1 /* OPPaymentProductConverter.h in Headers */,
+				F74A919524C1E19800FEE8F1 /* OPLabelTemplate.h in Headers */,
+				F74A917A24C1E19800FEE8F1 /* OPBasicPaymentProductGroups.h in Headers */,
+				F74A8F4924C1D99200FEE8F1 /* OPValidationErrorAllowed.h in Headers */,
+				F74A8F4A24C1D99200FEE8F1 /* OPValidationErrorExpirationDate.h in Headers */,
+				F74A8F1424C1D79400FEE8F1 /* OPIINDetailsResponse.h in Headers */,
+				F74A918224C1E19800FEE8F1 /* OPAccountOnFile.h in Headers */,
+				F74A8F4C24C1D99200FEE8F1 /* OPValidationError.h in Headers */,
+				F74A918E24C1E19800FEE8F1 /* OPPaymentItems.h in Headers */,
+				F74A8D1A24C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.h in Headers */,
+				F74A8F9F24C1E15A00FEE8F1 /* OPPaymentProduct302SpecificData.h in Headers */,
+				F74A8F8224C1DC8B00FEE8F1 /* OPValidators.h in Headers */,
+				F74A8F8324C1DC8B00FEE8F1 /* OPValueMappingItem.h in Headers */,
+				F74A8FA424C1E15A00FEE8F1 /* OPDisplayElementType.h in Headers */,
+				F74A8CC724C19D7400FEE8F1 /* OnlinePaymentsSDK.h in Headers */,
+				F74A8EEF24C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.h in Headers */,
+				F74A8EEB24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.h in Headers */,
+				F74A8EE724C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.h in Headers */,
+				F74A8EE324C1BEF400FEE8F1 /* OPNetworkingWrapper.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		F74A8CB524C19D7400FEE8F1 /* OnlinePaymentsSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74A8CCA24C19D7400FEE8F1 /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDK" */;
+			buildPhases = (
+				F74A8CB124C19D7400FEE8F1 /* Headers */,
+				F74A8CB224C19D7400FEE8F1 /* Sources */,
+				F74A8CB324C19D7400FEE8F1 /* Frameworks */,
+				F74A8CB424C19D7400FEE8F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OnlinePaymentsSDK;
+			productName = IngenicoDirectSDK;
+			productReference = F74A8CB624C19D7400FEE8F1 /* OnlinePaymentsSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F74A8CBE24C19D7400FEE8F1 /* OnlinePaymentsSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74A8CCD24C19D7400FEE8F1 /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDKTests" */;
+			buildPhases = (
+				F74A8CBB24C19D7400FEE8F1 /* Sources */,
+				F74A8CBC24C19D7400FEE8F1 /* Frameworks */,
+				F74A8CBD24C19D7400FEE8F1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F74A8CC224C19D7400FEE8F1 /* PBXTargetDependency */,
+			);
+			name = OnlinePaymentsSDKTests;
+			productName = IngenicoDirectSDKTests;
+			productReference = F74A8CBF24C19D7400FEE8F1 /* OnlinePaymentsSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F74A8CAD24C19D7400FEE8F1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "";
+				TargetAttributes = {
+					F74A8CB524C19D7400FEE8F1 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F74A8CBE24C19D7400FEE8F1 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+				};
+			};
+			buildConfigurationList = F74A8CB024C19D7400FEE8F1 /* Build configuration list for PBXProject "OnlinePaymentsSDK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F74A8CAC24C19D7400FEE8F1;
+			productRefGroup = F74A8CB724C19D7400FEE8F1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F74A8CB524C19D7400FEE8F1 /* OnlinePaymentsSDK */,
+				F74A8CBE24C19D7400FEE8F1 /* OnlinePaymentsSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F74A8CB424C19D7400FEE8F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74DA18124CF05B8002B6DE6 /* OnlinePaymentsSDK.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74A8CBD24C19D7400FEE8F1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F739BB6624C58DDE00FFE16B /* paymentProductGroups.json in Resources */,
+				F739BB6924C58DDE00FFE16B /* paymentProductGroup.json in Resources */,
+				F739BB6A24C58DDE00FFE16B /* paymentProduct.json in Resources */,
+				F739BB6524C58DDE00FFE16B /* certificate.pfx in Resources */,
+				F739BB6824C58DDE00FFE16B /* paymentProducts.json in Resources */,
+				F739BB6724C58DDE00FFE16B /* paymentProductMissingFields.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F74A8CB224C19D7400FEE8F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74A8F8424C1DC8B00FEE8F1 /* OPValidatorRange.m in Sources */,
+				F74A8F8C24C1DC8B00FEE8F1 /* OPValidatorLength.m in Sources */,
+				F74A8D4424C1BD4900FEE8F1 /* OPJSON.m in Sources */,
+				F74A8F7724C1DC8B00FEE8F1 /* OPValidatorFixedList.m in Sources */,
+				F74A919E24C1EF5900FEE8F1 /* OPValidatorIBAN.m in Sources */,
+				F74A8F5824C1D99200FEE8F1 /* OPValidationErrorRange.m in Sources */,
+				F74A8CEE24C1A89B00FEE8F1 /* OPSession.m in Sources */,
+				F74A8F5D24C1D99200FEE8F1 /* OPValidationErrorTermsAndConditions.m in Sources */,
+				F74A8F4424C1D99200FEE8F1 /* OPValidationErrorEmailAddress.m in Sources */,
+				F74A8F5024C1D99200FEE8F1 /* OPValidationErrorRegularExpression.m in Sources */,
+				F74A917924C1E19800FEE8F1 /* OPToolTip.m in Sources */,
+				F74A916E24C1E19800FEE8F1 /* OPBasicPaymentProductGroup.m in Sources */,
+				F74A917F24C1E19800FEE8F1 /* OPDataRestrictions.m in Sources */,
+				F74A8F8024C1DC8B00FEE8F1 /* OPValidatorLuhn.m in Sources */,
+				F74A8F8124C1DC8B00FEE8F1 /* OPValueMappingItem.m in Sources */,
+				F74A8F8924C1DC8B00FEE8F1 /* OPValidatorExpirationDate.m in Sources */,
+				F74A917B24C1E19800FEE8F1 /* OPAccountOnFileAttributes.m in Sources */,
+				F74A8F5724C1D99200FEE8F1 /* OPValidationErrorFixedList.m in Sources */,
+				F74A917824C1E19800FEE8F1 /* OPPaymentItemDisplayHints.m in Sources */,
+				F74A8EE824C1BF0A00FEE8F1 /* OPAFNetworkingWrapper.m in Sources */,
+				F74A8F4E24C1D99200FEE8F1 /* OPValidationError.m in Sources */,
+				F74A917D24C1E19800FEE8F1 /* OPAccountOnFile.m in Sources */,
+				F74A8D1D24C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.m in Sources */,
+				F74A8F7E24C1DC8B00FEE8F1 /* OPValidators.m in Sources */,
+				F74A8D0F24C1B7CA00FEE8F1 /* OPPaymentContextConverter.m in Sources */,
+				F74A919724C1E19800FEE8F1 /* OPAccountOnFileDisplayHints.m in Sources */,
+				F74A917324C1E19800FEE8F1 /* OPPaymentProductField.m in Sources */,
+				F74A8D1524C1B7CA00FEE8F1 /* OPBasicPaymentItemConverter.m in Sources */,
+				F74A919324C1E19800FEE8F1 /* OPAccountsOnFile.m in Sources */,
+				F74A8F1E24C1D88500FEE8F1 /* OPPaymentRequest.m in Sources */,
+				F74A8D2E24C1BB7F00FEE8F1 /* OPJOSEEncryptor.m in Sources */,
+				F74A918F24C1E19800FEE8F1 /* OPFormElement.m in Sources */,
+				F74A8F0124C1C77200FEE8F1 /* OPPaymentAmountOfMoney.m in Sources */,
+				F74A8F4624C1D99200FEE8F1 /* OPValidationErrorLuhn.m in Sources */,
+				F74A919424C1E19800FEE8F1 /* OPLabelTemplateItem.m in Sources */,
+				F74A918C24C1E19800FEE8F1 /* OPPaymentItems.m in Sources */,
+				F74A917024C1E19800FEE8F1 /* OPBasicPaymentProduct.m in Sources */,
+				F74A8FAD24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m in Sources */,
+				F74A8F5424C1D99200FEE8F1 /* OPValidationErrorIsRequired.m in Sources */,
+				F74A8D2224C1B7CA00FEE8F1 /* OPPaymentItemConverter.m in Sources */,
+				F74A8CF224C1B6F100FEE8F1 /* OPBase64.m in Sources */,
+				F74A8EFD24C1C75C00FEE8F1 /* OPPaymentContext.m in Sources */,
+				F74A8F7924C1DC8B00FEE8F1 /* OPValidator.m in Sources */,
+				F74A8EF024C1BF4000FEE8F1 /* OPNetworkingActivityConsoleLogger.m in Sources */,
+				F74A8CEA24C1A51C00FEE8F1 /* OPC2SCommunicator.m in Sources */,
+				F74A918424C1E19800FEE8F1 /* OPPaymentProductNetworks.m in Sources */,
+				F74A8F1524C1D79400FEE8F1 /* OPIINDetailsResponse.m in Sources */,
+				F74A8CE624C1A45000FEE8F1 /* OPC2SCommunicatorConfiguration.m in Sources */,
+				F74A918A24C1E19800FEE8F1 /* OPBasicPaymentProductGroups.m in Sources */,
+				F74A8EEC24C1BF2700FEE8F1 /* OPNetworkingActivityLogger.m in Sources */,
+				F74A917524C1E19800FEE8F1 /* OPAccountOnFileAttribute.m in Sources */,
+				F74A8D2A24C1BB1300FEE8F1 /* OPEncryptor.m in Sources */,
+				F74A8D1B24C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.m in Sources */,
+				F74A916F24C1E19800FEE8F1 /* OPLabelTemplate.m in Sources */,
+				F74A918624C1E19800FEE8F1 /* OPPaymentProductFields.m in Sources */,
+				F74A8F7D24C1DC8B00FEE8F1 /* OPValidatorRegularExpression.m in Sources */,
+				F74A8FA924C1E15A00FEE8F1 /* OPDisplayElement.m in Sources */,
+				F74A8F8524C1DC8B00FEE8F1 /* OPValidatorTermsAndConditions.m in Sources */,
+				F74A8D1F24C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.m in Sources */,
+				F74A8F1924C1D7F600FEE8F1 /* OPIINDetail.m in Sources */,
+				F74A8F4524C1D99200FEE8F1 /* OPValidationErrorExpirationDate.m in Sources */,
+				F74A918024C1E19800FEE8F1 /* OPPaymentProductFieldDisplayHints.m in Sources */,
+				F74A8F5324C1D99200FEE8F1 /* OPValidationErrorNumericString.m in Sources */,
+				F74A8F4724C1D99200FEE8F1 /* OPValidationErrorLength.m in Sources */,
+				F74A918324C1E19800FEE8F1 /* OPPaymentProduct.m in Sources */,
+				F74A8F5B24C1D99200FEE8F1 /* OPValidationErrorInteger.m in Sources */,
+				F74A8FA124C1E15A00FEE8F1 /* OPPaymentProduct302SpecificData.m in Sources */,
+				F74A8CDE24C1A30900FEE8F1 /* OPUtil.m in Sources */,
+				F74A8D4024C1BCF100FEE8F1 /* OPStringFormatter.m in Sources */,
+				F74A8F8E24C1DC8B00FEE8F1 /* OPValidatorEmailAddress.m in Sources */,
+				F74A8F5224C1D99200FEE8F1 /* OPValidationErrorIBAN.m in Sources */,
+				F74A8F4824C1D99200FEE8F1 /* OPValidationErrorAllowed.m in Sources */,
+				F74A8F2224C1D90D00FEE8F1 /* OPPreparedPaymentRequest.m in Sources */,
+				F74A919124C1E19800FEE8F1 /* OPPaymentProductGroup.m in Sources */,
+				F74A8F2624C1D94400FEE8F1 /* OPPublicKeyResponse.m in Sources */,
+				F74A8CE224C1A3C700FEE8F1 /* OPAssetManager.m in Sources */,
+				F74A8D1424C1B7CA00FEE8F1 /* OPPaymentProductConverter.m in Sources */,
+				F74A917124C1E19800FEE8F1 /* OPBasicPaymentProducts.m in Sources */,
+				F74A8EE424C1BEF400FEE8F1 /* OPNetworkingWrapper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74A8CBB24C19D7400FEE8F1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F739BB5824C582F100FFE16B /* OPJOSEEncryptorTestCase.m in Sources */,
+				F739BB8524C58E6600FFE16B /* OPPaymentProductFieldTestCase.m in Sources */,
+				F739BB8624C58E6600FFE16B /* OPValidatorExpirationDateTestCase.m in Sources */,
+				F739BB5E24C58D8100FFE16B /* OPJSONTestCase.m in Sources */,
+				F739BB8F24C58E6600FFE16B /* OPValidatorLengthTestCase.m in Sources */,
+				F739BB8C24C58E6600FFE16B /* OPAccountsOnFileTestCase.m in Sources */,
+				F739BB8924C58E6600FFE16B /* OPPaymentRequestTestCase.m in Sources */,
+				F739BB8324C58E6600FFE16B /* OPValidatorRangeTestCase.m in Sources */,
+				F739BB5A24C5834500FFE16B /* OPEncryptorTestCase.m in Sources */,
+				F739BB8224C58E6600FFE16B /* OPPaymentProductsTestCase.m in Sources */,
+				F739BB8824C58E6600FFE16B /* OPAccountOnFileAttributesTestCase.m in Sources */,
+				F739BB5624C582AA00FFE16B /* OPPaymentProductsConverterTestCase.m in Sources */,
+				F739BB8E24C58E6600FFE16B /* OPLabelTemplateTestCase.m in Sources */,
+				F739BB8024C58E6600FFE16B /* OPAccountOnFileTestCase.m in Sources */,
+				F739BB8A24C58E6600FFE16B /* OPValidatorFixedListTestCase.m in Sources */,
+				F739BB8424C58E6600FFE16B /* OPValidatorEmailAddressTestCase.m in Sources */,
+				F74A91A924C2F54F00FEE8F1 /* OPUtilTestCase.m in Sources */,
+				F739BB8B24C58E6600FFE16B /* OPBasicPaymentProductTestCase.m in Sources */,
+				F739BB9124C58E6600FFE16B /* OPPaymentProductTestCase.m in Sources */,
+				F739BB9024C58E6600FFE16B /* OPValidatorLuhnTestCase.m in Sources */,
+				F739BB6C24C58DF900FFE16B /* OPNetworkingWrapperTestCase.m in Sources */,
+				F739BB5424C5827500FFE16B /* OPPaymentProductConverterTestCase.m in Sources */,
+				F739BB8724C58E6600FFE16B /* OPPaymentProductFieldsTestCase.m in Sources */,
+				F739BB8124C58E6600FFE16B /* OPValidatorRegularExpressionTestCase.m in Sources */,
+				F739BB5C24C58D4E00FFE16B /* OPStringFormatterTestCase.m in Sources */,
+				F739BB4A24C57C6000FFE16B /* OPBase64TestCase.m in Sources */,
+				F739BB4E24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m in Sources */,
+				F74A91AD24C2F5E700FEE8F1 /* OPC2SCommunicatorTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F74A8CC224C19D7400FEE8F1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F74A8CB524C19D7400FEE8F1 /* OnlinePaymentsSDK */;
+			targetProxy = F74A8CC124C19D7400FEE8F1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F74A8CC824C19D7400FEE8F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F74A8CC924C19D7400FEE8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F74A8CCB24C19D7400FEE8F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/OnlinePaymentsSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F74A8CCC24C19D7400FEE8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/OnlinePaymentsSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsSDK;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F74A8CCE24C19D7400FEE8F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OnlinePaymentsSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F74A8CCF24C19D7400FEE8F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = OnlinePaymentsSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F74A8CB024C19D7400FEE8F1 /* Build configuration list for PBXProject "OnlinePaymentsSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74A8CC824C19D7400FEE8F1 /* Debug */,
+				F74A8CC924C19D7400FEE8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F74A8CCA24C19D7400FEE8F1 /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74A8CCB24C19D7400FEE8F1 /* Debug */,
+				F74A8CCC24C19D7400FEE8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F74A8CCD24C19D7400FEE8F1 /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74A8CCE24C19D7400FEE8F1 /* Debug */,
+				F74A8CCF24C19D7400FEE8F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F74A8CAD24C19D7400FEE8F1 /* Project object */;
+}
