@@ -30,6 +30,7 @@
 - (void)setPaymentProductDisplayHints:(OPPaymentItemDisplayHints *)displayHints JSON:(NSDictionary *)rawDisplayHints
 {
     displayHints.displayOrder = [[rawDisplayHints objectForKey:@"displayOrder"] integerValue];
+    displayHints.label = [[rawDisplayHints objectForKey:@"label"] stringValue];
     displayHints.logoPath = [rawDisplayHints objectForKey:@"logo"];
 }
 

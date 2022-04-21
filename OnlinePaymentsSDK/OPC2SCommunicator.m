@@ -42,6 +42,7 @@
         OPBasicPaymentProductsConverter *converter = [[OPBasicPaymentProductsConverter alloc] init];
         OPBasicPaymentProducts *paymentProducts = [converter paymentProductsFromJSON:rawPaymentProducts];
         [self checkApplePayAvailabilityWithPaymentProducts:paymentProducts forContext:context success:^{
+            [self removeGooglePayProduct:paymentProducts];
             success(paymentProducts);
         } failure:^(NSError *error) {
             failure(error);
@@ -69,6 +70,13 @@
         }
     } else {
         success();
+    }
+}
+
+- (void)removeGooglePayProduct:(OPBasicPaymentProducts *)paymentProducts {
+    OPBasicPaymentProduct *googlePayPaymentProduct = [paymentProducts paymentProductWithIdentifier:kOPGooglePayIdentifier];
+    if (googlePayPaymentProduct != nil) {
+        [paymentProducts.paymentProducts removeObject:googlePayPaymentProduct];
     }
 }
 

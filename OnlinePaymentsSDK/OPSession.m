@@ -77,7 +77,9 @@
         [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
         [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL] callback:^{
             [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-            success(paymentProducts);
+            [self setLogoForPaymentItems:paymentProducts.paymentProducts completion:^{
+                success(paymentProducts);
+            }];
         }];
     } failure:^(NSError *error) {
         failure(error);
@@ -99,8 +101,10 @@
         [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
         [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL] callback:^{
             [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-                OPPaymentItems *items = [[OPPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
+            OPPaymentItems *items = [[OPPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
+            [self setLogoForPaymentItems:items.paymentItems completion:^{
                 success(items);
+            }];
         }];
 
     } failure:failure];
@@ -118,7 +122,10 @@
             [self.assetManager initializeImagesForPaymentItem:paymentProduct];
             [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProduct baseURL:[self.communicator assetsBaseURL] callback:^{
                 [self.assetManager initializeImagesForPaymentItem:paymentProduct];
-                success(paymentProduct);
+                [self setLogoForDisplayHints:paymentProduct.displayHints completion:^{}];
+                [self setLogoForDisplayHintsList:paymentProduct.displayHintsList completion:^{
+                    success(paymentProduct);
+                }];
             }];
         } failure:^(NSError *error) {
             failure(error);
@@ -185,6 +192,54 @@
         failure(error);
     }];
 }
+
+- (void)setLogoForPaymentItems:(NSArray *)paymentItems completion:(void(^)(void))completion;
+{
+    __block int counter = 0;
+    for (OPBasicPaymentProduct *paymentItem in paymentItems) {
+        [self setLogoForDisplayHints:paymentItem.displayHints completion:^{}];
+        if (paymentItem.displayHintsList != nil) {
+            [self setLogoForDisplayHintsList:paymentItem.displayHintsList completion:^{
+                counter += 1;
+                if (counter == [paymentItems count]) {
+                    completion();
+                }
+            }];
+        } else {
+            counter += 1;
+            if (counter == [paymentItems count]) {
+                completion();
+            }
+        }
+    }
+}
+
+- (void)setLogoForDisplayHints:(OPPaymentItemDisplayHints *)displayHints completion:(void(^)(void))completion;
+{
+    [self.assetManager getLogoByStringURL:displayHints.logoPath callback:^(UIImage *image) {
+        if (image != nil) {
+            displayHints.logoImage = image;
+        }
+        completion();
+    }];
+}
+
+
+- (void)setLogoForDisplayHintsList:(NSArray *)displayHints completion:(void(^)(void))completion;
+{
+    __block int counter = 0;
+    for (OPPaymentItemDisplayHints *displayHint in displayHints)
+        [self.assetManager getLogoByStringURL:displayHint.logoPath callback:^(UIImage *image) {
+            counter += 1;
+            if (image != nil) {
+                displayHint.logoImage = image;
+            }
+            if (counter == [displayHints count]) {
+                completion();
+            }
+        }];
+}
+
 
 - (NSString *)clientSessionId
 {

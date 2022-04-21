@@ -10,5 +10,6 @@
 
 @property (strong, nonatomic) NSString *imagePath;
 @property (strong, nonatomic) UIImage *image;
+@property (strong, nonatomic) NSString *label;
 
 @end

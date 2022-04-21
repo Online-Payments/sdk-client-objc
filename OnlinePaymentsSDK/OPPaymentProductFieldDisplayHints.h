@@ -20,6 +20,7 @@
 @property (nonatomic) OPPreferredInputType preferredInputType;
 @property (strong, nonatomic) OPTooltip *tooltip;
 @property (strong, nonatomic) NSString *label;
+@property (strong, nonatomic) NSString *placeholderLabel;
 @property (strong, nonatomic) NSURL *link;
 
 @end

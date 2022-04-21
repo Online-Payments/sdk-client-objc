@@ -48,26 +48,34 @@
 }
 
 - (NSString *)logoIdentifierWithPaymentItem:(NSObject<OPPaymentItem> *)paymentItem {
-    NSString *path = paymentItem.displayHints.logoPath;
-    NSURL *url = [[NSURL alloc] initWithString:path];
-    NSString *fileName = [url lastPathComponent];
-    fileName = [fileName stringByReplacingOccurrencesOfString:@".png" withString:@""];
-    NSRange range = [fileName rangeOfString:@"_" options: NSBackwardsSearch];
-    if (range.location != NSNotFound) {
-        fileName = [fileName substringToIndex:(range.location)];
+    if (paymentItem.displayHintsList != nil) {
+        NSString *path = paymentItem.displayHintsList[0].logoPath;
+        NSURL *url = [[NSURL alloc] initWithString:path];
+        NSString *fileName = [url lastPathComponent];
+        fileName = [fileName stringByReplacingOccurrencesOfString:@".png" withString:@""];
+        NSRange range = [fileName rangeOfString:@"_" options: NSBackwardsSearch];
+        if (range.location != NSNotFound) {
+            fileName = [fileName substringToIndex:(range.location)];
+        }
+        return fileName;
+    } else {
+        return nil;
     }
-    return fileName;
 }
 
 - (void)initializeImagesForPaymentItems:(NSArray *)paymentItems
 {
     for (NSObject<OPPaymentItem> *paymentItem in paymentItems) {
-        paymentItem.displayHints.logoImage = [self logoImageForPaymentItem:paymentItem.identifier];
+        if (paymentItem.displayHintsList != nil) {
+            paymentItem.displayHintsList[0].logoImage = [self logoImageForPaymentItem:paymentItem.identifier];
+        }
     }
 }
 
 - (void)initializeImagesForPaymentItem:(NSObject<OPPaymentItem> *)paymentItem {
-    paymentItem.displayHints.logoImage = [self logoImageForPaymentItem:paymentItem.identifier];
+    if (paymentItem.displayHintsList != nil) {
+        paymentItem.displayHintsList[0].logoImage = [self logoImageForPaymentItem:paymentItem.identifier];
+    }
     for (OPPaymentProductField *field in paymentItem.fields.paymentProductFields) {
         if (field.displayHints.tooltip.imagePath != nil) {
             field.displayHints.tooltip.image = [self tooltipImageForPaymentItem:paymentItem.identifier field:field.identifier];
@@ -116,8 +124,10 @@
 {
     NSMutableDictionary *imageMapping = [[[NSUserDefaults standardUserDefaults] objectForKey:kOPImageMapping] mutableCopy];
     for (NSObject<OPPaymentItem> *paymentItem in paymentItems) {
-        NSString *identifier = [NSString stringWithFormat:self.logoFormat, paymentItem.identifier];
-        [self updateImageWithIdentifier:identifier imageMapping:imageMapping newPath:paymentItem.displayHints.logoPath baseURL:baseURL];
+        if (paymentItem.displayHintsList != nil) {
+            NSString *identifier = [NSString stringWithFormat:self.logoFormat, paymentItem.identifier];
+            [self updateImageWithIdentifier:identifier imageMapping:imageMapping newPath:paymentItem.displayHintsList[0].logoPath baseURL:baseURL];
+        }
     }
     [StandardUserDefaults setObject:imageMapping forKey:kOPImageMapping];
     [StandardUserDefaults synchronize];
@@ -202,7 +212,9 @@
 - (void) getLogoByStringURL:(NSString *)url callback:(void (^)(UIImage *))callback
 {
     dispatch_async(dispatch_get_global_queue(0,0), ^{
-        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: url]];
+        NSString *urlString = [url stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
+        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: urlString]];
+        
         dispatch_async(dispatch_get_main_queue(), ^{
             UIImage *image = [UIImage imageWithData: data];
             callback(image);
