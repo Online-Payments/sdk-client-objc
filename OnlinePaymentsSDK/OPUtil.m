@@ -31,7 +31,7 @@
         NSString *deviceType = [self deviceType];
         self.metaInfo = @{
             @"platformIdentifier": platformIdentifier,
-            @"sdkIdentifier": @"objcClientSDK/v2.0.1",
+            @"sdkIdentifier": @"objcClientSDK/v2.0.2",
             @"sdkCreator": @"OnlinePayments",
             @"screenSize": screenSize,
             @"deviceBrand": @"Apple",

@@ -65,22 +65,22 @@
 - (void)testSort
 {
     OPBasicPaymentProduct *product1 = [[OPBasicPaymentProduct alloc] init];
-    product1.displayHints.displayOrder = 100;
+    product1.displayHintsList.firstObject.displayOrder = 100;
     [self.products.paymentProducts addObject:product1];
     OPBasicPaymentProduct *product2 = [[OPBasicPaymentProduct alloc] init];
-    product2.displayHints.displayOrder = 10;
+    product2.displayHintsList.firstObject.displayOrder = 10;
     [self.products.paymentProducts addObject:product2];
     OPBasicPaymentProduct *product3 = [[OPBasicPaymentProduct alloc] init];
-    product3.displayHints.displayOrder = 99;
+    product3.displayHintsList.firstObject.displayOrder = 99;
     [self.products.paymentProducts addObject:product3];
     [self.products sort];
     NSUInteger displayOrder = 0;
     for (int i = 0; i < 3; ++i) {
         OPBasicPaymentProduct *product = self.products.paymentProducts[i];
-        if (displayOrder > product.displayHints.displayOrder) {
+        if (displayOrder > product.displayHintsList.firstObject.displayOrder) {
             XCTFail(@"Products are not sorted");
         }
-        displayOrder = product.displayHints.displayOrder;
+        displayOrder = product.displayHintsList.firstObject.displayOrder;
     }
 }
 

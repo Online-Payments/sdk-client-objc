@@ -9,10 +9,10 @@
 
 typedef enum {
     OPSupported,
-    OPUnsupported,
+    OPUnsupported DEPRECATED_ATTRIBUTE __deprecated_msg("In a next release, this status will be removed."),
     OPUnknown,
     OPNotEnoughDigits,
-    OPPending,
+    OPPending DEPRECATED_ATTRIBUTE __deprecated_msg("In a next release, this status will be removed."),
     OPExistingButNotAllowed
 } OPIINStatus;
 

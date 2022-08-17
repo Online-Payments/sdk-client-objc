@@ -33,13 +33,13 @@
 
 - (void)testValidateValueCorrect
 {
-    [self.field validateValue:@"0055"];
+    [self.field validateValue:@"0055" forPaymentRequest:nil];
     XCTAssertTrue(self.field.errors.count == 0, @"Unexpected errors after validation");
 }
 
 - (void)testValidateValueIncorrect
 {
-    [self.field validateValue:@"0"];
+    [self.field validateValue:@"0" forPaymentRequest:nil];
     XCTAssertTrue(self.field.errors.count == 2, @"Unexpected number of errors after validation");
 }
 

@@ -65,7 +65,7 @@
 
 - (void)testValidateCorrect10
 {
-    [self.validator validate:@"\"b(c)d,e:f;g<h>i[j\\k]l@example.com"];
+    [self.validator validate:@"\"b(c)d,e:f;g<h>i[j\\k]l@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid address is considered invalid");
 }
 
@@ -101,13 +101,13 @@
 
 - (void)testValidateInCorrect7
 {
-   [self.validator validate:@"\"Abc\\@def\"@example.com"];
+    [self.validator validate:@"\"Abc\\@def\"@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
 }
 
 - (void)testValidateInCorrect8
 {
-    [self.validator validate:@"\"Abc@def\"@example.com"];
+    [self.validator validate:@"\"Abc@def\"@example.com" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid address is considered valid");
 }
 

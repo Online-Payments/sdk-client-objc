@@ -33,8 +33,8 @@
     }
     for (OPBasicPaymentProduct *product in paymentProducts.paymentProducts) {
         XCTAssertNotNil(product.identifier, @"Payment product has no identifier");
-        XCTAssertNotNil(product.displayHints, @"Payment product has no displayHints");
-        XCTAssertNotNil(product.displayHints.logoPath, @"Payment product has no logo path in displayHints");
+        XCTAssertNotNil(product.displayHintsList, @"Payment product has no displayHints");
+        XCTAssertNotNil(product.displayHintsList.firstObject.logoPath, @"Payment product has no logo path in displayHints");
         if (product.accountsOnFile != nil) {
             for (OPAccountOnFile *accountOnFile in product.accountsOnFile.accountsOnFile) {
                 XCTAssertNotNil(accountOnFile.attributes, @"Account on file has no attributes");

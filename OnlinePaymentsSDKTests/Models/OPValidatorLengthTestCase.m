@@ -38,19 +38,19 @@
 
 - (void)testValidateCorrect3
 {
-    [self.validator validate:@"123"];
+    [self.validator validate:@"123" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count == 0, @"Valid value considered invalid");
 }
 
 - (void)testValidateIncorrect1
 {
-    [self.validator validate:@""];
+    [self.validator validate:@"" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid value considered valid");
 }
 
 - (void)testValidateIncorrect2
 {
-    [self.validator validate:@"1234"];
+    [self.validator validate:@"1234" forPaymentRequest:nil];
     XCTAssertTrue(self.validator.errors.count != 0, @"Invalid value considered valid");
 }
 

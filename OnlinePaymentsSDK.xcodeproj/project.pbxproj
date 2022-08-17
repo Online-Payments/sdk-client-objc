@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55E7B4A928ABEEE3000283DF /* KeychainEntitlementsTestAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7B4A828ABEEE3000283DF /* KeychainEntitlementsTestAppApp.swift */; };
+		55E7B4AB28ABEEE3000283DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E7B4AA28ABEEE3000283DF /* ContentView.swift */; };
+		55E7B4AD28ABEEE4000283DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E7B4AC28ABEEE4000283DF /* Assets.xcassets */; };
+		55E7B4B028ABEEE4000283DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55E7B4AF28ABEEE4000283DF /* Preview Assets.xcassets */; };
 		F739BB4A24C57C6000FFE16B /* OPBase64TestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB4924C57C6000FFE16B /* OPBase64TestCase.m */; };
 		F739BB4E24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB4D24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m */; };
 		F739BB5424C5827500FFE16B /* OPPaymentProductConverterTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F739BB5324C5827500FFE16B /* OPPaymentProductConverterTestCase.m */; };
@@ -215,6 +219,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		55E7B4B428ABEEEE000283DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F74A8CAD24C19D7400FEE8F1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 55E7B4A528ABEEE3000283DF;
+			remoteInfo = KeychainEntitlementsTestApp;
+		};
 		F74A8CC124C19D7400FEE8F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F74A8CAD24C19D7400FEE8F1 /* Project object */;
@@ -225,6 +236,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		55E7B4A628ABEEE3000283DF /* KeychainEntitlementsTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeychainEntitlementsTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		55E7B4A828ABEEE3000283DF /* KeychainEntitlementsTestAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainEntitlementsTestAppApp.swift; sourceTree = "<group>"; };
+		55E7B4AA28ABEEE3000283DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		55E7B4AC28ABEEE4000283DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		55E7B4AF28ABEEE4000283DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F739BB4924C57C6000FFE16B /* OPBase64TestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPBase64TestCase.m; sourceTree = "<group>"; };
 		F739BB4D24C5814600FFE16B /* OPBasicPaymentProductConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPBasicPaymentProductConverterTestCase.m; sourceTree = "<group>"; };
 		F739BB5324C5827500FFE16B /* OPPaymentProductConverterTestCase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OPPaymentProductConverterTestCase.m; sourceTree = "<group>"; };
@@ -437,6 +453,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		55E7B4A328ABEEE3000283DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F74A8CB324C19D7400FEE8F1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -455,11 +478,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55E7B4A728ABEEE3000283DF /* KeychainEntitlementsTestApp */ = {
+			isa = PBXGroup;
+			children = (
+				55E7B4A828ABEEE3000283DF /* KeychainEntitlementsTestAppApp.swift */,
+				55E7B4AA28ABEEE3000283DF /* ContentView.swift */,
+				55E7B4AC28ABEEE4000283DF /* Assets.xcassets */,
+				55E7B4AE28ABEEE4000283DF /* Preview Content */,
+			);
+			path = KeychainEntitlementsTestApp;
+			sourceTree = "<group>";
+		};
+		55E7B4AE28ABEEE4000283DF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				55E7B4AF28ABEEE4000283DF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		F74A8CAC24C19D7400FEE8F1 = {
 			isa = PBXGroup;
 			children = (
 				F74A8CB824C19D7400FEE8F1 /* OnlinePaymentsSDK */,
 				F74A8CC324C19D7400FEE8F1 /* OnlinePaymentsSDKTests */,
+				55E7B4A728ABEEE3000283DF /* KeychainEntitlementsTestApp */,
 				F74A8CB724C19D7400FEE8F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -469,6 +512,7 @@
 			children = (
 				F74A8CB624C19D7400FEE8F1 /* OnlinePaymentsSDK.framework */,
 				F74A8CBF24C19D7400FEE8F1 /* OnlinePaymentsSDKTests.xctest */,
+				55E7B4A628ABEEE3000283DF /* KeychainEntitlementsTestApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1021,6 +1065,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		55E7B4A528ABEEE3000283DF /* KeychainEntitlementsTestApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55E7B4B328ABEEE4000283DF /* Build configuration list for PBXNativeTarget "KeychainEntitlementsTestApp" */;
+			buildPhases = (
+				55E7B4A228ABEEE3000283DF /* Sources */,
+				55E7B4A328ABEEE3000283DF /* Frameworks */,
+				55E7B4A428ABEEE3000283DF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeychainEntitlementsTestApp;
+			productName = KeychainEntitlementsTestApp;
+			productReference = 55E7B4A628ABEEE3000283DF /* KeychainEntitlementsTestApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F74A8CB524C19D7400FEE8F1 /* OnlinePaymentsSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F74A8CCA24C19D7400FEE8F1 /* Build configuration list for PBXNativeTarget "OnlinePaymentsSDK" */;
@@ -1051,6 +1112,7 @@
 			);
 			dependencies = (
 				F74A8CC224C19D7400FEE8F1 /* PBXTargetDependency */,
+				55E7B4B528ABEEEE000283DF /* PBXTargetDependency */,
 			);
 			name = OnlinePaymentsSDKTests;
 			productName = IngenicoDirectSDKTests;
@@ -1063,14 +1125,19 @@
 		F74A8CAD24C19D7400FEE8F1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = "";
 				TargetAttributes = {
+					55E7B4A528ABEEE3000283DF = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
 					F74A8CB524C19D7400FEE8F1 = {
 						CreatedOnToolsVersion = 11.5;
 					};
 					F74A8CBE24C19D7400FEE8F1 = {
 						CreatedOnToolsVersion = 11.5;
+						TestTargetID = 55E7B4A528ABEEE3000283DF;
 					};
 				};
 			};
@@ -1089,11 +1156,21 @@
 			targets = (
 				F74A8CB524C19D7400FEE8F1 /* OnlinePaymentsSDK */,
 				F74A8CBE24C19D7400FEE8F1 /* OnlinePaymentsSDKTests */,
+				55E7B4A528ABEEE3000283DF /* KeychainEntitlementsTestApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		55E7B4A428ABEEE3000283DF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E7B4B028ABEEE4000283DF /* Preview Assets.xcassets in Resources */,
+				55E7B4AD28ABEEE4000283DF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F74A8CB424C19D7400FEE8F1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1118,6 +1195,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		55E7B4A228ABEEE3000283DF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55E7B4AB28ABEEE3000283DF /* ContentView.swift in Sources */,
+				55E7B4A928ABEEE3000283DF /* KeychainEntitlementsTestAppApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F74A8CB224C19D7400FEE8F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1242,6 +1328,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		55E7B4B528ABEEEE000283DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 55E7B4A528ABEEE3000283DF /* KeychainEntitlementsTestApp */;
+			targetProxy = 55E7B4B428ABEEEE000283DF /* PBXContainerItemProxy */;
+		};
 		F74A8CC224C19D7400FEE8F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F74A8CB524C19D7400FEE8F1 /* OnlinePaymentsSDK */;
@@ -1250,6 +1341,72 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		55E7B4B128ABEEE4000283DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KeychainEntitlementsTestApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = op.KeychainEntitlementsTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		55E7B4B228ABEEE4000283DF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"KeychainEntitlementsTestApp/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = op.KeychainEntitlementsTestApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		F74A8CC824C19D7400FEE8F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1417,6 +1574,7 @@
 		F74A8CCE24C19D7400FEE8F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OnlinePaymentsSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1427,12 +1585,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainEntitlementsTestApp.app/KeychainEntitlementsTestApp";
 			};
 			name = Debug;
 		};
 		F74A8CCF24C19D7400FEE8F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = OnlinePaymentsSDKTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1443,12 +1603,22 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.onlinepayments.OnlinePaymentsSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KeychainEntitlementsTestApp.app/KeychainEntitlementsTestApp";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		55E7B4B328ABEEE4000283DF /* Build configuration list for PBXNativeTarget "KeychainEntitlementsTestApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55E7B4B128ABEEE4000283DF /* Debug */,
+				55E7B4B228ABEEE4000283DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F74A8CB024C19D7400FEE8F1 /* Build configuration list for PBXProject "OnlinePaymentsSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

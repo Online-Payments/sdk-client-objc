@@ -190,30 +190,36 @@ additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes
         userInfo[OPNetworkingTaskDidCompleteErrorKey] = apiError;
     }
     
-    NSError *serializationError = nil;
-    id responseObject = [self responseObjectForResponse:response data:data error:&serializationError];
-    
-    if (responseObject) {
-        userInfo[OPNetworkingTaskDidCompleteSerializedResponseKey] = responseObject;
-    }
-    
-    if (serializationError) {
-        userInfo[OPNetworkingTaskDidCompleteErrorKey] = serializationError;
-    }
-    
-    dispatch_async(dispatch_get_main_queue(), ^(void) {
+    if (data != nil) {
+        NSError *serializationError = nil;
+        id responseObject = [self responseObjectForResponse:response data:data error:&serializationError];
         
-        // Send notification that the request finished
-        [[NSNotificationCenter defaultCenter] postNotificationName:OPNetworkingTaskDidCompleteNotification object:requestTask userInfo:userInfo];
-        
-        // Call the appropriate callback
-        if (!isValid) {
-            DLog(@"Error while retrieving response for URL %@: %@", [[requestTask originalRequest] URL], [error localizedDescription]);
-            failure(error);
-        } else {
-            success(responseObject);
+        if (responseObject) {
+            userInfo[OPNetworkingTaskDidCompleteSerializedResponseKey] = responseObject;
         }
-    });
+        
+        if (serializationError) {
+            userInfo[OPNetworkingTaskDidCompleteErrorKey] = serializationError;
+        }
+        
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            
+            // Send notification that the request finished
+            [[NSNotificationCenter defaultCenter] postNotificationName:OPNetworkingTaskDidCompleteNotification object:requestTask userInfo:userInfo];
+            
+            // Call the appropriate callback
+            if (!isValid) {
+                DLog(@"Error while retrieving response for URL %@: %@", [[requestTask originalRequest] URL], [error localizedDescription]);
+                failure(error);
+            } else {
+                success(responseObject);
+            }
+        });
+    } else {
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            failure(error);
+        });
+    }
 }
 
 - (BOOL)validateResponse:(NSHTTPURLResponse *)response

@@ -85,7 +85,7 @@
 
 - (void)testValidLowerSameMonthAndYear
 {
-    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+    NSCalendar *gregorianCalendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *nowComponents = [[NSDateComponents alloc] init];
     [nowComponents setYear:2018];
     [nowComponents setMonth:9];

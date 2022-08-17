@@ -96,6 +96,10 @@
 
 - (void)paymentItemsForContext:(OPPaymentContext *)context groupPaymentProducts:(BOOL)groupPaymentProducts success:(void (^)(OPPaymentItems *paymentItems))success failure:(void (^)(NSError *error))failure {
     [self.communicator paymentProductsForContext:context success:^(OPBasicPaymentProducts *paymentProducts) {
+        if (paymentProducts.paymentProducts.count == 0) {
+            OPPaymentItems *items = [[OPPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
+            success(items);
+        }
         self.paymentProducts = paymentProducts;
         self.paymentProducts.stringFormatter = self.stringFormatter;
         [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
@@ -138,11 +142,7 @@
     if (partialCreditCardNumber.length < 6) {
         OPIINDetailsResponse *response = [[OPIINDetailsResponse alloc] initWithStatus:OPNotEnoughDigits];
         success(response);
-    } else if (self.iinLookupPending == YES) {
-        OPIINDetailsResponse *response = [[OPIINDetailsResponse alloc] initWithStatus:OPPending];
-        success(response);
-    }
-    else {
+    } else {
         self.iinLookupPending = YES;
         [self.communicator paymentProductIdByPartialCreditCardNumber:partialCreditCardNumber context:context success:^(OPIINDetailsResponse *response) {
             self.iinLookupPending = NO;

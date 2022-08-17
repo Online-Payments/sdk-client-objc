@@ -27,7 +27,7 @@
 
 - (void)testBase64EncodedClientMetaInfo;
 {
-    NSString *info = [self.util base64EncodedClientMetaInfo];
+    NSString *info = [self.util base64EncodedClientMetaInfoWithAppIdentifier:@"appIdentifier" ipAddress:@"ipAddress"];
     NSData *decodedInfo = [self.base64 decode:info];
     NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:decodedInfo options:0 error:NULL];
     XCTAssertTrue([[JSON objectForKey:@"deviceBrand"] isEqualToString:@"Apple"] == YES, @"Incorrect device brand in meta info");
@@ -35,7 +35,7 @@
 
 - (void)testBase64EncodedClientMetaInfoWithAddedData;
 {
-    NSString *info = [self.util base64EncodedClientMetaInfoWithAddedData:@{@"test": @"value"}];
+    NSString *info = [self.util base64EncodedClientMetaInfoWithAppIdentifier:@"appIdentifier" ipAddress:@"ipAddress" addedData:@{@"test": @"value"}];
     NSData *decodedInfo = [self.base64 decode:info];
     NSDictionary *JSON = [NSJSONSerialization JSONObjectWithData:decodedInfo options:0 error:NULL];
     XCTAssertTrue([[JSON objectForKey:@"test"] isEqualToString:@"value"] == YES, @"Incorrect value for added key in meta info");
