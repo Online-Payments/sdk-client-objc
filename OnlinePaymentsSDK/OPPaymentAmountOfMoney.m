@@ -10,10 +10,6 @@
 @implementation OPPaymentAmountOfMoney
 
 - (instancetype)initWithTotalAmount:(long)totalAmount currencyCode:(NSString *)currencyCode {
-    if ([kOPCurrencyCodes rangeOfString:currencyCode].location == NSNotFound) {
-        [NSException raise:@"Invalid currency code" format:@"Currency code %@ is invalid", currencyCode];
-    }
-
     self = [super init];
     if (self) {
         _totalAmount = totalAmount;

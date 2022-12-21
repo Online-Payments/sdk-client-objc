@@ -11,10 +11,6 @@
 @implementation OPPaymentContext
 
 - (instancetype)initWithAmountOfMoney:(OPPaymentAmountOfMoney *)amountOfMoney isRecurring:(BOOL)isRecurring countryCode:(NSString *)countryCode {
-    if ([kOPCountryCodes rangeOfString:countryCode].location == NSNotFound) {
-        [NSException raise:@"Invalid country code" format:@"Country code %@ is invalid", countryCode];
-    }
-    
     self = [super init];
     if (self) {
         self.amountOfMoney = amountOfMoney;

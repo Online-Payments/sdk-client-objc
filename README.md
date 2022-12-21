@@ -35,6 +35,7 @@ $ github "online-payments/sdk-client-objc"
 Afterwards, run the following command:
 
 ```
-$ carthage update
+$ carthage update --use-xcframeworks
 ```
 
+Navigate to the ```Carthage/Build``` directory, which was created in the same directory as where the ```.xcodeproj``` or ```.xcworkspace``` is. Inside this directory the ```.xcframework``` bundle is stored. Drag the ```.xcframework``` into the "Framework, Libraries and Embedded Content" section of the desired target. Make sure that it is set to "Embed & Sign".
