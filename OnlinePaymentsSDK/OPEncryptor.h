@@ -6,6 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPEncryptor : NSObject
 
 - (void)generateRSAKeyPairWithPublicTag:(NSString *)publicTagString privateTag:(NSString *)privateTagString;

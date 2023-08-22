@@ -8,6 +8,7 @@
 
 @class OPPaymentContext;
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPPaymentContextConverter : NSObject
 
 - (NSDictionary *)JSONFromPaymentProductContext:(OPPaymentContext *)paymentProductContext partialCreditCardNumber:(NSString *)partialCreditCardNumber;

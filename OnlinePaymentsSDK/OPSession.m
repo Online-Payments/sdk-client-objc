@@ -14,7 +14,7 @@
 @interface OPSession ()
 
 @property (strong, nonatomic) OPC2SCommunicator *communicator;
-@property (strong, nonatomic) OPAssetManager *assetManager;
+@property (strong, nonatomic) OPAssetManager *assetManager DEPRECATED_ATTRIBUTE __deprecated_msg("In a next release, this property will be removed. Instead retrieve logos / tooltip images by accessing the OPPaymentItem");
 @property (strong, nonatomic) OPEncryptor *encryptor;
 @property (strong, nonatomic) OPJOSEEncryptor *JOSEEncryptor;
 @property (strong, nonatomic) OPStringFormatter *stringFormatter;
@@ -49,6 +49,26 @@
     return self;
 }
 
+- (instancetype)initWithCommunicator:(OPC2SCommunicator *)communicator encryptor:(OPEncryptor *)encryptor JOSEEncryptor:(OPJOSEEncryptor *)JOSEEncryptor stringFormatter:(OPStringFormatter *)stringFormatter
+{
+    self = [super init];
+    if (self != nil) {
+        self.base64 = [[OPBase64 alloc] init];
+        self.JSON = [[OPJSON alloc] init];
+        self.communicator = communicator;
+        self.assetManager = nil;
+        self.encryptor = encryptor;
+        self.JOSEEncryptor = JOSEEncryptor;
+        self.stringFormatter = stringFormatter;
+        self.IINMapping = [[StandardUserDefaults objectForKey:kOPIINMapping] mutableCopy];
+        if (self.IINMapping == nil) {
+            self.IINMapping = [[NSMutableDictionary alloc] init];
+        }
+        self.paymentProductMapping = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
+
 -(NSString *)baseURL {
     return [self.communicator baseURL];
 }
@@ -57,15 +77,35 @@
     return [self.communicator assetsBaseURL];
 }
 
+- (BOOL)loggingEnabled {
+    return [self.communicator loggingEnabled];
+}
+
+-(void)setLoggingEnabled:(BOOL)loggingEnabled {
+    [self.communicator setLoggingEnabled:loggingEnabled];
+}
+
 + (OPSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier{
     OPUtil *util = [[OPUtil alloc] init];
     OPAssetManager *assetManager = [[OPAssetManager alloc] init];
     OPStringFormatter *stringFormatter = [[OPStringFormatter alloc] init];
     OPEncryptor *encryptor = [[OPEncryptor alloc] init];
-    OPC2SCommunicatorConfiguration *configuration = [[OPC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier util:util];
+    OPC2SCommunicatorConfiguration *configuration = [[OPC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier util:util loggingEnabled:NO];
     OPC2SCommunicator *communicator = [[OPC2SCommunicator alloc] initWithConfiguration:configuration];
     OPJOSEEncryptor *JOSEEncryptor = [[OPJOSEEncryptor alloc] initWithEncryptor:encryptor];
     OPSession *session = [[OPSession alloc] initWithCommunicator:communicator assetManager:assetManager encryptor:encryptor JOSEEncryptor:JOSEEncryptor stringFormatter:stringFormatter];
+    return session;
+}
+
++ (OPSession *)sessionWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier loggingEnabled:(BOOL)loggingEnabled {
+    OPUtil *util = [[OPUtil alloc] init];
+    OPAssetManager *assetManager = [[OPAssetManager alloc] init];
+    OPStringFormatter *stringFormatter = [[OPStringFormatter alloc] init];
+    OPEncryptor *encryptor = [[OPEncryptor alloc] init];
+    OPC2SCommunicatorConfiguration *configuration = [[OPC2SCommunicatorConfiguration alloc] initWithClientSessionId:clientSessionId customerId:customerId baseURL:baseURL assetBaseURL:assetBaseURL appIdentifier:appIdentifier util:util loggingEnabled:loggingEnabled];
+    OPC2SCommunicator *communicator = [[OPC2SCommunicator alloc] initWithConfiguration:configuration];
+    OPJOSEEncryptor *JOSEEncryptor = [[OPJOSEEncryptor alloc] initWithEncryptor:encryptor];
+    OPSession *session = [[OPSession alloc] initWithCommunicator:communicator encryptor:encryptor JOSEEncryptor:JOSEEncryptor stringFormatter:stringFormatter];
     return session;
 }
 
@@ -74,12 +114,8 @@
     [self.communicator paymentProductsForContext:context success:^(OPBasicPaymentProducts *paymentProducts) {
         self.paymentProducts = paymentProducts;
         self.paymentProducts.stringFormatter = self.stringFormatter;
-        [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL] callback:^{
-            [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-            [self setLogoForPaymentItems:paymentProducts.paymentProducts completion:^{
-                success(paymentProducts);
-            }];
+        [self setLogoForPaymentItems:paymentProducts.paymentProducts completion:^{
+            success(paymentProducts);
         }];
     } failure:^(NSError *error) {
         failure(error);
@@ -102,15 +138,11 @@
         }
         self.paymentProducts = paymentProducts;
         self.paymentProducts.stringFormatter = self.stringFormatter;
-        [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-        [self.assetManager updateImagesForPaymentItemsAsynchronously:paymentProducts.paymentProducts baseURL:[self.communicator assetsBaseURL] callback:^{
-            [self.assetManager initializeImagesForPaymentItems:paymentProducts.paymentProducts];
-            OPPaymentItems *items = [[OPPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
-            [self setLogoForPaymentItems:items.paymentItems completion:^{
-                success(items);
-            }];
-        }];
 
+        OPPaymentItems *items = [[OPPaymentItems alloc] initWithPaymentProducts:paymentProducts groups:nil];
+        [self setLogoForPaymentItems:items.paymentItems completion:^{
+            success(items);
+        }];
     } failure:failure];
 }
 
@@ -123,13 +155,10 @@
     } else {
         [self.communicator paymentProductWithId:paymentProductId context:context success:^(OPPaymentProduct *paymentProduct) {
             [self.paymentProductMapping setObject:paymentProduct forKey:key];
-            [self.assetManager initializeImagesForPaymentItem:paymentProduct];
-            [self.assetManager updateImagesForPaymentItemAsynchronously:paymentProduct baseURL:[self.communicator assetsBaseURL] callback:^{
-                [self.assetManager initializeImagesForPaymentItem:paymentProduct];
-                [self setLogoForDisplayHints:paymentProduct.displayHints completion:^{}];
-                [self setLogoForDisplayHintsList:paymentProduct.displayHintsList completion:^{
-                    success(paymentProduct);
-                }];
+            [self setTooltipImages:paymentProduct completion:^{}];
+            [self setLogoForDisplayHints:paymentProduct.displayHints completion:^{}];
+            [self setLogoForDisplayHintsList:paymentProduct.displayHintsList completion:^{
+                success(paymentProduct);
             }];
         } failure:^(NSError *error) {
             failure(error);
@@ -156,7 +185,7 @@
 
 - (void)preparePaymentRequest:(OPPaymentRequest *)paymentRequest success:(void (^)(OPPreparedPaymentRequest *preparedPaymentRequest))success failure:(void (^)(NSError *error))failure;
 {
-    [self.communicator publicKey:^(OPPublicKeyResponse *publicKeyResponse) {
+    [self.communicator publicKeyWithSuccess:^(OPPublicKeyResponse *publicKeyResponse) {
         NSString *keyId = publicKeyResponse.keyId;
         
         NSString *encodedPublicKey = publicKeyResponse.encodedPublicKey;
@@ -216,7 +245,7 @@
 
 - (void)setLogoForDisplayHints:(OPPaymentItemDisplayHints *)displayHints completion:(void(^)(void))completion;
 {
-    [self.assetManager getLogoByStringURL:displayHints.logoPath callback:^(UIImage *image) {
+    [self getLogoByStringURL:displayHints.logoPath callback:^(UIImage *image) {
         if (image != nil) {
             displayHints.logoImage = image;
         }
@@ -229,7 +258,7 @@
 {
     __block int counter = 0;
     for (OPPaymentItemDisplayHints *displayHint in displayHints)
-        [self.assetManager getLogoByStringURL:displayHint.logoPath callback:^(UIImage *image) {
+        [self getLogoByStringURL:displayHint.logoPath callback:^(UIImage *image) {
             counter += 1;
             if (image != nil) {
                 displayHint.logoImage = image;
@@ -240,10 +269,33 @@
         }];
 }
 
+- (void)setTooltipImages:(NSObject<OPPaymentItem> *)paymentItem completion:(void(^)(void))completion;
+{
+    for (OPPaymentProductField *field in paymentItem.fields.paymentProductFields)
+        if (field.displayHints.tooltip.imagePath != nil) {
+            [self getLogoByStringURL:field.displayHints.tooltip.imagePath callback:^(UIImage *image) {
+                field.displayHints.tooltip.image = image;
+            }];
+        }
+}
+
 
 - (NSString *)clientSessionId
 {
     return [self.communicator clientSessionId];
+}
+
+- (void) getLogoByStringURL:(NSString *)url callback:(void (^)(UIImage *))callback
+{
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        NSString *urlString = [url stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
+        NSData * data = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: urlString]];
+
+        dispatch_async(dispatch_get_main_queue(), ^{
+            UIImage *image = [UIImage imageWithData: data];
+            callback(image);
+        });
+    });
 }
 
 @end

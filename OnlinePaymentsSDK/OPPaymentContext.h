@@ -13,7 +13,7 @@
 @property (nonatomic, readonly) BOOL isRecurring;
 @property (strong, nonatomic, readonly) NSString *countryCode;
 @property (strong, nonatomic) NSString *locale;
-@property (assign, nonatomic) BOOL forceBasicFlow;
+@property (assign, nonatomic) BOOL forceBasicFlow DEPRECATED_ATTRIBUTE __deprecated_msg("In a future release, this field will be removed.");
 
 - (instancetype)initWithAmountOfMoney:(OPPaymentAmountOfMoney *)amountOfMoney isRecurring:(BOOL)isRecurring countryCode:(NSString *)countryCode;
 

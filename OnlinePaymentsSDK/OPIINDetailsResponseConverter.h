@@ -7,6 +7,7 @@
 #import <Foundation/Foundation.h>
 #import "OPIINDetailsResponse.h"
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPIINDetailsResponseConverter : NSObject
 
 - (OPIINDetailsResponse *)IINDetailsResponseFromJSON:(NSDictionary *)rawIINDetailsResponse;

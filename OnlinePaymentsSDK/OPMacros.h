@@ -5,6 +5,7 @@
 // 
 
 //Debug log
+#pragma message ("In a future release, this header file will become internal to the SDK.")
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else

@@ -17,6 +17,8 @@
 @property (nonatomic, strong) NSMutableArray<OPPaymentItemDisplayHints *> *displayHintsList;
 @property (nonatomic, strong) OPAccountsOnFile *accountsOnFile;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 - (void)setStringFormatter:(OPStringFormatter *)stringFormatter;
 - (OPAccountOnFile *)accountOnFileWithIdentifier:(NSString *)accountOnFileIdentifier;
 

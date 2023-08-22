@@ -34,6 +34,7 @@ FOUNDATION_EXPORT NSString * const OPNetworkingTaskDidCompleteSerializedResponse
 FOUNDATION_EXPORT NSString * const OPNetworkingOperationFailingURLResponseErrorKey;
 FOUNDATION_EXPORT NSString * const OPNetworkingOperationFailingURLResponseDataErrorKey;
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPNetworkingWrapper : NSObject
 
 - (void)getResponseForURL:(NSString *)URL headers:(NSDictionary *)headers additionalAcceptableStatusCodes:(NSIndexSet *)additionalAcceptableStatusCodes success:(void (^)(id responseObject))success failure:(void (^)(NSError *error))failure;

@@ -23,6 +23,7 @@
 #import <Foundation/Foundation.h>
 #import "OPNetworkingActivityLoggerProtocol.h"
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPNetworkingActivityLogger : NSObject
 
 @property (nonatomic, strong, readonly) NSSet <OPNetworkingActivityLoggerProtocol> *loggers;

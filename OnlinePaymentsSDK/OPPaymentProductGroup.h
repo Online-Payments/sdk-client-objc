@@ -21,6 +21,8 @@
 @property (nonatomic) BOOL allowsRecurring;
 @property (strong, nonatomic) OPPaymentProductFields *fields;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 - (OPAccountOnFile *)accountOnFileWithIdentifier:(NSString *)accountOnFileIdentifier;
 - (void)setStringFormatter:(OPStringFormatter *)stringFormatter;
 - (OPPaymentProductField *)paymentProductFieldWithId:(NSString *)paymentProductFieldId;

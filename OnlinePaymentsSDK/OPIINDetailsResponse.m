@@ -8,6 +8,12 @@
 
 @implementation OPIINDetailsResponse
 
+- (instancetype)init {
+    self = [super init];
+
+    return self;
+}
+
 - (instancetype)initWithStatus:(OPIINStatus)status {
     self = [super init];
     if (self) {

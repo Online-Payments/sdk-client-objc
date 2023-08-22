@@ -6,6 +6,7 @@
 
 #import <Foundation/Foundation.h>
 
+__deprecated_msg("In a future release, this interface will become internal to the SDK.")
 @interface OPUtil : NSObject
 
 - (NSString *)base64EncodedClientMetaInfo __deprecated_msg("use method base64EncodedClientMetaInfoWithAppIdentifier:ipAddress: instead");

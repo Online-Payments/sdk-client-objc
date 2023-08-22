@@ -17,17 +17,21 @@
 
 @class OPBasicPaymentProductGroups;
 @class OPPaymentProductGroup;
+
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPC2SCommunicator : NSObject
 
 - (instancetype)initWithConfiguration:(OPC2SCommunicatorConfiguration *)configuration;
 - (void)paymentProductsForContext:(OPPaymentContext *)context success:(void (^)(OPBasicPaymentProducts *paymentProducts))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductWithId:(NSString *)paymentProductId context:(OPPaymentContext *)context success:(void (^)(OPPaymentProduct *paymentProduct))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductIdByPartialCreditCardNumber:(NSString *)partialCreditCardNumber context:(OPPaymentContext *)context success:(void (^)(OPIINDetailsResponse *iinDetailsResponse))success failure:(void (^)(NSError *error))failure;
-- (void)publicKey:(void (^)(OPPublicKeyResponse *publicKeyResponse))success failure:(void (^)(NSError *error))failure;
+- (void)publicKeyWithSuccess:(void (^)(OPPublicKeyResponse *publicKeyResponse))success failure:(void (^)(NSError *error))failure;
 - (void)paymentProductNetworksForProductId:(NSString *)paymentProductId context:(OPPaymentContext *)context success:(void (^)(OPPaymentProductNetworks *paymentProductNetworks))success failure:(void (^)(NSError *error))failure;
 - (NSString *)base64EncodedClientMetaInfo;
 - (NSString *)baseURL;
 - (NSString *)assetsBaseURL;
 - (NSString *)clientSessionId;
+- (BOOL)loggingEnabled;
+- (void)setLoggingEnabled:(BOOL)loggingEnabled;
 
 @end

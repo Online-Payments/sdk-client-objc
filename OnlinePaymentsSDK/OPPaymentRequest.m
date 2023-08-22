@@ -11,7 +11,6 @@
 @interface OPPaymentRequest ()
 
 @property (strong, nonatomic) NSMutableDictionary *fieldValues;
-@property (strong, nonatomic) OPStringFormatter *formatter;
 
 @end
 
@@ -33,6 +32,11 @@
     [self.fieldValues setObject:value forKey:paymentProductFieldId];
 }
 
+- (void)setValueForField:(NSString *)paymentProductFieldId value:(NSString *)value
+{
+    [self.fieldValues setObject:value forKey:paymentProductFieldId];
+}
+
 - (NSString *)valueForField:(NSString *)paymentProductFieldId
 {
     NSString *value = [self.fieldValues objectForKey:paymentProductFieldId];
@@ -43,7 +47,7 @@
             if ([validator class] == [OPValidatorFixedList class]) {
                 OPValidatorFixedList *fixedListValidator = (OPValidatorFixedList *)validator;
                 value = fixedListValidator.allowedValues[0];
-                [self setValue:value forField:paymentProductFieldId];
+                [self setValueForField:paymentProductFieldId value:value];
             }
         }
     }

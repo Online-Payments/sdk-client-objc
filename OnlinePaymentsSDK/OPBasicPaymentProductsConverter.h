@@ -9,6 +9,7 @@
 #import "OPAssetManager.h"
 #import "OPStringFormatter.h"
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPBasicPaymentProductsConverter : NSObject
 
 - (OPBasicPaymentProducts *)paymentProductsFromJSON:(NSArray *)rawProducts;

@@ -8,6 +8,7 @@
 
 #import "OPUtil.h"
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPC2SCommunicatorConfiguration : NSObject {
     NSString *_baseURL;
 }
@@ -21,8 +22,12 @@
 @property (nonatomic, strong) NSString *baseURL;
 @property (nonatomic, strong) NSString *assetsBaseURL;
 
-- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier util:(OPUtil *)util;
-- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(OPUtil *)util;
+@property (nonatomic) BOOL loggingEnabled;
+
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier util:(OPUtil *)util DEPRECATED_ATTRIBUTE __deprecated_msg("Please use initWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier:util:loggingEnabled instead");
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier util:(OPUtil *)util loggingEnabled:(BOOL)loggingEnabled;
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(OPUtil *)util DEPRECATED_ATTRIBUTE __deprecated_msg("Please use initWithClientSessionId:customerId:baseURL:assetBaseURL:appIdentifier:ipAddress:util:loggingEnabled instead");
+- (instancetype)initWithClientSessionId:(NSString *)clientSessionId customerId:(NSString *)customerId baseURL:(NSString *)baseURL assetBaseURL:(NSString *)assetBaseURL appIdentifier:(NSString *)appIdentifier ipAddress:(NSString *)ipAddress util:(OPUtil *)util loggingEnabled:(BOOL)loggingEnabled;
 - (NSString *)base64EncodedClientMetaInfo;
 
 @end

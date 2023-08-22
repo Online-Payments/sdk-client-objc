@@ -9,6 +9,7 @@
 @class OPPaymentProductFields;
 @protocol OPBasicPaymentItem;
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPBasicPaymentItemConverter : NSObject
 
 - (void)setBasicPaymentItem:(NSObject <OPBasicPaymentItem> *)paymentItem JSON:(NSDictionary *)rawPaymentItem;

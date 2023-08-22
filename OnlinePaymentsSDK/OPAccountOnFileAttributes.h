@@ -10,6 +10,8 @@
 
 @property (strong, nonatomic) NSMutableArray *attributes;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 - (NSString *)valueForField:(NSString *)paymentProductFieldId;
 - (BOOL)hasValueForField:(NSString *)paymentProductFieldId;
 - (BOOL)fieldIsReadOnly:(NSString *)paymentProductFieldId;

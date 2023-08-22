@@ -21,6 +21,8 @@
 @property (nonatomic) OPType type;
 @property (strong, nonatomic) NSMutableArray *errors;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 - (void)validateValue:(NSString *)value DEPRECATED_ATTRIBUTE;
 - (void)validateValue:(NSString *)value forPaymentRequest:(OPPaymentRequest *)request;
 

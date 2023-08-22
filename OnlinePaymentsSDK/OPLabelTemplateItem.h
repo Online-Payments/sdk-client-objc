@@ -11,4 +11,6 @@
 @property (strong, nonatomic) NSString *attributeKey;
 @property (strong, nonatomic) NSString *mask;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 @end

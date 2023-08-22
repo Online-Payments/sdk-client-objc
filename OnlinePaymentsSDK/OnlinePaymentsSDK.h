@@ -61,6 +61,7 @@ FOUNDATION_EXPORT const unsigned char OnlinePaymentsSDKVersionString[];
 
 #import <OnlinePaymentsSDK/OPBasicPaymentProduct.h>
 #import <OnlinePaymentsSDK/OPBasicPaymentProducts.h>
+#import <OnlinePaymentsSDK/OPBasicPaymentProductGroup.h>
 #import <OnlinePaymentsSDK/OPDataRestrictions.h>
 #import <OnlinePaymentsSDK/OPDisplayElement.h>
 #import <OnlinePaymentsSDK/OPDisplayElementsConverter.h>
@@ -71,6 +72,7 @@ FOUNDATION_EXPORT const unsigned char OnlinePaymentsSDKVersionString[];
 #import <OnlinePaymentsSDK/OPPaymentItemDisplayHints.h>
 #import <OnlinePaymentsSDK/OPPaymentItems.h>
 #import <OnlinePaymentsSDK/OPPaymentProduct.h>
+#import <OnlinePaymentsSDK/OPPaymentProductGroup.h>
 #import <OnlinePaymentsSDK/OPPaymentProduct302SpecificData.h>
 #import <OnlinePaymentsSDK/OPPaymentProductField.h>
 #import <OnlinePaymentsSDK/OPPaymentProductFieldDisplayHints.h>

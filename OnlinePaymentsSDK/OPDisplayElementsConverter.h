@@ -8,6 +8,7 @@
 
 @class OPDisplayElement;
 
+__deprecated_msg("In a future release, this interface and its functions will become internal to the SDK.")
 @interface OPDisplayElementsConverter : NSObject
 
 -(OPDisplayElement *)displayElementFromJSON:(NSDictionary *)json;

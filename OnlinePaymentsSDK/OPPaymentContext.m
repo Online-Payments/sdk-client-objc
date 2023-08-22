@@ -17,7 +17,6 @@
         _isRecurring = isRecurring;
         _countryCode = countryCode;
     }
-    self.forceBasicFlow = YES;
     NSString *localeCountryCode = [[NSLocale currentLocale] objectForKey: NSLocaleCountryCode];
     if (localeCountryCode != nil) {
         self.locale = [[[[NSLocale currentLocale] objectForKey: NSLocaleLanguageCode] stringByAppendingString:@"_"] stringByAppendingString:localeCountryCode];

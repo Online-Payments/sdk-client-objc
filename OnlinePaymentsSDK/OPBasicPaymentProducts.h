@@ -11,6 +11,8 @@
 
 @property (strong, nonatomic) NSMutableArray *paymentProducts;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 - (BOOL)hasAccountsOnFile;
 - (NSArray *)accountsOnFile;
 - (OPBasicPaymentProduct *)paymentProductWithIdentifier:(NSString *)paymentProductIdentifier;

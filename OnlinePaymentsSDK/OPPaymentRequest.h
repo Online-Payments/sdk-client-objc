@@ -14,8 +14,10 @@
 @property (strong, nonatomic) OPAccountOnFile *accountOnFile;
 @property (strong, nonatomic) NSMutableArray *errors;
 @property (nonatomic) BOOL tokenize;
+@property (strong, nonatomic) OPStringFormatter *formatter;
 
-- (void)setValue:(NSString *)value forField:(NSString *)paymentProductFieldId;
+- (void)setValueForField:(NSString *)paymentProductFieldId value:(NSString *)value;
+- (void)setValue:(NSString *)value forField:(NSString *)paymentProductFieldId __deprecated_msg("Please use setValueForField:value: instead.");
 - (void)validate;
 - (BOOL)fieldIsPartOfAccountOnFile:(NSString *)paymentProductFieldId;
 - (BOOL)fieldIsReadOnly:(NSString *)paymentProductFieldId;

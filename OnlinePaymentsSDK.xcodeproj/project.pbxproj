@@ -680,6 +680,8 @@
 				F74A8D0524C1B7CA00FEE8F1 /* OPBasicPaymentProductConverter.m */,
 				F74A8D0C24C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.h */,
 				F74A8D0324C1B7CA00FEE8F1 /* OPBasicPaymentProductsConverter.m */,
+				F74A8F9C24C1E15900FEE8F1 /* OPDisplayElementsConverter.h */,
+				F74A8F9D24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m */,
 				F74A8CFB24C1B7C900FEE8F1 /* OPIINDetailsResponseConverter.h */,
 				F74A8D0724C1B7CA00FEE8F1 /* OPIINDetailsResponseConverter.m */,
 				F74A8D0E24C1B7CA00FEE8F1 /* OPPaymentContextConverter.h */,
@@ -820,6 +822,7 @@
 		F74DA17A24CEE40E002B6DE6 /* IINDetails */ = {
 			isa = PBXGroup;
 			children = (
+				F74A8F1624C1D7F600FEE8F1 /* OPIINDetail.h */,
 				F74A8F1224C1D79400FEE8F1 /* OPIINDetailsResponse.h */,
 				F74A8F1324C1D79400FEE8F1 /* OPIINDetailsResponse.m */,
 				F74A8F1724C1D7F600FEE8F1 /* OPIINDetail.m */,
@@ -830,8 +833,9 @@
 		F74DA17B24CEE415002B6DE6 /* PaymentProducts */ = {
 			isa = PBXGroup;
 			children = (
+				F74A8F6B24C1DC8A00FEE8F1 /* OPValueMappingItem.h */,
+				F74A8F6924C1DC8A00FEE8F1 /* OPValueMappingItem.m */,
 				F74A915224C1E19500FEE8F1 /* OPBasicPaymentProduct.h */,
-				F74A8F1624C1D7F600FEE8F1 /* OPIINDetail.h */,
 				F74A914424C1E19300FEE8F1 /* OPBasicPaymentProduct.m */,
 				F74A915D24C1E19600FEE8F1 /* OPBasicPaymentProductGroup.h */,
 				F74A914224C1E19300FEE8F1 /* OPBasicPaymentProductGroup.m */,
@@ -843,8 +847,6 @@
 				F74A915324C1E19500FEE8F1 /* OPDataRestrictions.m */,
 				F74A8F9724C1E15900FEE8F1 /* OPDisplayElement.h */,
 				F74A8F9924C1E15900FEE8F1 /* OPDisplayElement.m */,
-				F74A8F9C24C1E15900FEE8F1 /* OPDisplayElementsConverter.h */,
-				F74A8F9D24C1E15A00FEE8F1 /* OPDisplayElementsConverter.m */,
 				F74A8F9424C1E15900FEE8F1 /* OPDisplayElementType.h */,
 				F74A915024C1E19500FEE8F1 /* OPFormElement.h */,
 				F74A916324C1E19700FEE8F1 /* OPFormElement.m */,
@@ -921,8 +923,6 @@
 				F74A8F6624C1DC8A00FEE8F1 /* OPValidators.m */,
 				F74A8F6724C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.h */,
 				F74A8F6D24C1DC8A00FEE8F1 /* OPValidatorTermsAndConditions.m */,
-				F74A8F6B24C1DC8A00FEE8F1 /* OPValueMappingItem.h */,
-				F74A8F6924C1DC8A00FEE8F1 /* OPValueMappingItem.m */,
 			);
 			name = Validators;
 			sourceTree = "<group>";

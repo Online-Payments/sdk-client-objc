@@ -8,6 +8,12 @@
 
 @implementation OPIINDetail
 
+- (instancetype)init {
+    self = [super init];
+
+    return self;
+}
+
 - (instancetype)initWithPaymentProductId:(NSString *)paymentProductId allowedInContext:(BOOL)allowedInContext {
     self = [super init];
     if (self) {

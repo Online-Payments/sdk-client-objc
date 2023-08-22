@@ -17,6 +17,8 @@
 @property (strong, nonatomic) OPAccountOnFileDisplayHints *displayHints;
 @property (strong, nonatomic) OPAccountOnFileAttributes *attributes;
 
+- (instancetype)init DEPRECATED_ATTRIBUTE __deprecated_msg("This initialiser is meant for internal SDK usage and should not be used. In the future this contract may change without warning.");
+
 - (NSString *)maskedValueForField:(NSString *)paymentProductFieldId;
 - (NSString *)maskedValueForField:(NSString *)paymentProductFieldId mask:(NSString *)mask;
 - (BOOL)hasValueForField:(NSString *)paymentProductFieldId;
