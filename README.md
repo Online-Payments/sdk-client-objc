@@ -220,7 +220,7 @@ OPAccountOnFile *accountOnFile = [basicPaymentProduct accountOnFileWithIdentifie
 
 // Shows a mask based formatted value for the obfuscated cardNumber.
 // The mask that is used is defined in the displayHints of this accountOnFile
-// If the mask is {{9999}} {{9999}} {{9999}} {{9999}} {{999}}, then the result would be **** **** **** 7412
+// If the mask is {{9999}} {{9999}} {{9999}} {{9999}}, then the result would be **** **** **** 7412
 NSString *maskedValue = [accountOnFile maskedValueForField:@"cardNumber"];
 ```
 
@@ -362,7 +362,7 @@ To help in formatting field values based on masks, the SDK offers the `OPStringF
 ```objective-c
 OPStringFormatter *formatter = [[OPStringFormatter alloc] init];
 
-NSString *mask = @"{{9999}} {{9999}} {{9999}} {{9999}} {{999}}";
+NSString *mask = @"{{9999}} {{9999}} {{9999}} {{9999}}";
 NSString *value = @"1234567890123456";
 
 // apply masked value
