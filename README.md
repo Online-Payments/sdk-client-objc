@@ -1,3 +1,7 @@
+# SDK Decommissioned
+
+**Online Payments Objective-C SDK has been decommissioned. Please use our [Swift SDK](https://github.com/online-payments/sdk-client-swift) instead.**
+
 # Online Payments Objective-C SDK
 
 The Online Payments Objective-C SDK helps you with accepting payments in your iOS app, supporting iOS 9.0 and up, through the Online Payments platform.
@@ -44,7 +48,7 @@ The SDK's main function is to establish a secure channel between your iOS app an
     - [5. Response from the Server API call](#5-response-from-the-server-api-call)
 
 ## Installation
----------------------------------------
+
 The Online Payments Objective-C SDK is available via the following package managers: [CocoaPods](https://cocoapods.org/) or [Carthage](https://github.com/Carthage/Carthage).
 
 ### CocoaPods
